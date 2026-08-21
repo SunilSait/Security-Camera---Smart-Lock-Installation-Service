@@ -68,7 +68,7 @@
 </section>
 
 <!-- ═══════ BENTO GRID FEATURES ═══════ -->
-<section class="py-20 lg:py-28 bg-white dark:bg-[#0D1117]">
+<section class="pt-20 pb-10 lg:pt-28 lg:pb-14 bg-white dark:bg-[#0D1117]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16 reveal">
             <span class="section-label mb-4 inline-flex"><i class="fas fa-microchip"></i> Smart Features</span>
@@ -79,36 +79,267 @@
 
         <div class="bento-grid">
             <!-- Large Card: 4K Cameras -->
-            <div class="bento-large reveal bg-gradient-to-br from-[#1A3A5C] to-[#0D1117] rounded-3xl p-8 text-white relative overflow-hidden card-hover flex flex-col justify-end min-h-[350px]">
-                <div class="absolute inset-0 opacity-20">
-                    <img src="assets/images/product-camera.jpg" alt="4K Camera" class="w-full h-full object-cover" onerror="this.style.display='none'">
+            <div class="bento-large reveal bg-white dark:bg-[#161B22] rounded-3xl p-7 border border-slate-200/80 dark:border-[#30363D] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full group">
+                <!-- Clean Bright Product Image -->
+                <div class="relative w-full flex-1 min-h-[260px] sm:min-h-[280px] rounded-2xl overflow-hidden mb-5 bg-slate-50 dark:bg-[#0D1117] flex items-center justify-center">
+                    <img src="assets/images/product-camera.jpg" alt="4K AI Security Camera" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'">
+                    <!-- Floating badges -->
+                    <div class="absolute top-3 left-3 flex items-center gap-2">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1A3A5C] text-white text-xs font-bold shadow-md">
+                            <i class="fas fa-video text-[10px] text-[#2EC4B6]"></i> 4K Ultra HD
+                        </span>
+                        <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/90 dark:bg-[#161B22]/90 backdrop-blur-md text-[11px] text-slate-800 dark:text-white font-bold shadow-sm">
+                            <i class="fas fa-circle text-[#2EC4B6] text-[7px] animate-pulse"></i> AI Powered
+                        </span>
+                    </div>
                 </div>
-                <div class="absolute inset-0 bg-gradient-to-t from-[#1A3A5C] via-[#1A3A5C]/60 to-transparent"></div>
-                <div class="relative z-10">
-                    <span class="badge bg-[#2EC4B6] text-white mb-4">Ultra HD</span>
-                    <h3 class="text-2xl font-black mb-2" style="font-family:'Poppins',sans-serif;">4K AI Cameras</h3>
-                    <p class="text-white/60 text-sm leading-relaxed">Person detection, vehicle tracking, night vision up to 30m, and real-time mobile alerts with AI-powered analytics.</p>
+
+                <div class="shrink-0">
+                    <span class="text-[10px] font-black tracking-widest uppercase bg-[#2EC4B6]/10 text-[#2EC4B6] px-2.5 py-1 rounded-full mb-2 inline-block">Surveillance Core</span>
+                    <h3 class="text-2xl font-black text-slate-900 dark:text-white mb-2" style="font-family:'Poppins',sans-serif;">4K AI Cameras</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-3">Person detection, vehicle tracking, 30m color night vision, and real-time mobile push alerts with AI analytics.</p>
+                    <div class="flex flex-wrap gap-4 pt-3 border-t border-slate-100 dark:border-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-300">
+                        <span class="flex items-center gap-1.5"><i class="fas fa-check text-[#2EC4B6]"></i> 0-Lag 4K Stream</span>
+                        <span class="flex items-center gap-1.5"><i class="fas fa-check text-[#2EC4B6]"></i> Color Starlight Vision</span>
+                    </div>
                 </div>
             </div>
+
             <!-- Biometric Locks -->
-            <div class="reveal bg-white dark:bg-[#161B22] rounded-3xl p-6 border border-slate-100 dark:border-[#30363D] card-hover spotlight-card animation-delay-200">
-                <div class="w-14 h-14 rounded-2xl bg-[#2EC4B6]/10 flex items-center justify-center mb-4"><i class="fas fa-fingerprint text-[#2EC4B6] text-2xl"></i></div>
-                <h3 class="font-black text-lg text-slate-900 dark:text-white mb-2" style="font-family:'Poppins',sans-serif;">Biometric Locks</h3>
-                <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Fingerprint, face ID & PIN code access. Grant temporary keys to guests remotely via app.</p>
+            <div class="reveal bg-white dark:bg-[#161B22] rounded-3xl p-7 border border-slate-200/80 dark:border-[#30363D] card-hover spotlight-card shadow-sm hover:shadow-xl transition-all duration-300 animation-delay-200 group flex flex-col justify-between h-full">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-[#2EC4B6]/15 text-[#2EC4B6] flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                            <i class="fas fa-fingerprint"></i>
+                        </div>
+                        <span class="text-[10px] font-black tracking-widest uppercase bg-[#2EC4B6]/10 text-[#2EC4B6] px-3 py-1 rounded-full">Smart Access</span>
+                    </div>
+                    <h3 class="font-black text-xl text-slate-900 dark:text-white mb-2" style="font-family:'Poppins',sans-serif;">Biometric Locks</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">3D Face-ID, semiconductor fingerprint & PIN code deadbolts. Manage guest keys and view live entry logs from anywhere.</p>
+                    
+                    <!-- Added Feature Specifications -->
+                    <div class="space-y-2.5 mb-4">
+                        <div class="flex items-center gap-2.5 text-xs text-slate-600 dark:text-slate-300">
+                            <i class="fas fa-shield-halved text-[#2EC4B6] text-xs shrink-0"></i>
+                            <span>5 Unlock Modes (Face-ID, Fingerprint, App, PIN, RFID)</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-xs text-slate-600 dark:text-slate-300">
+                            <i class="fas fa-key text-[#2EC4B6] text-xs shrink-0"></i>
+                            <span>Temporary Scheduled Guest & Staff Passes</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-xs text-slate-600 dark:text-slate-300">
+                            <i class="fas fa-battery-full text-[#2EC4B6] text-xs shrink-0"></i>
+                            <span>12-Month Battery Life + Mechanical Backup Key</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pt-3.5 border-t border-slate-100 dark:border-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center justify-between">
+                    <span class="flex items-center gap-1.5"><i class="fas fa-bolt text-[#2EC4B6]"></i> 0.3s Fast Unlock</span>
+                    <span class="text-slate-400 text-[11px]">Anti-Pry Alarm</span>
+                </div>
             </div>
+
             <!-- Motion Sensors -->
-            <div class="reveal bg-white dark:bg-[#161B22] rounded-3xl p-6 border border-slate-100 dark:border-[#30363D] card-hover spotlight-card animation-delay-400">
-                <div class="w-14 h-14 rounded-2xl bg-[#1A3A5C]/10 dark:bg-[#2EC4B6]/10 flex items-center justify-center mb-4"><i class="fas fa-satellite-dish text-[#1A3A5C] dark:text-[#2EC4B6] text-2xl"></i></div>
-                <h3 class="font-black text-lg text-slate-900 dark:text-white mb-2" style="font-family:'Poppins',sans-serif;">Motion Sensors</h3>
-                <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">PIR motion detection with zone-based alerts. Distinguish between humans, pets & vehicles.</p>
+            <div class="reveal bg-white dark:bg-[#161B22] rounded-3xl p-7 border border-slate-200/80 dark:border-[#30363D] card-hover spotlight-card shadow-sm hover:shadow-xl transition-all duration-300 animation-delay-400 group flex flex-col justify-between h-full">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-[#1A3A5C]/15 dark:bg-[#2EC4B6]/15 text-[#1A3A5C] dark:text-[#2EC4B6] flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                            <i class="fas fa-satellite-dish"></i>
+                        </div>
+                        <span class="text-[10px] font-black tracking-widest uppercase bg-indigo-500/10 text-indigo-500 dark:text-indigo-400 px-3 py-1 rounded-full">Perimeter Grid</span>
+                    </div>
+                    <h3 class="font-black text-xl text-slate-900 dark:text-white mb-2" style="font-family:'Poppins',sans-serif;">Motion Sensors</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">Dual-PIR infrared & microwave motion detection with zone-based alerts. Smart filtering distinguishes humans, pets & vehicles.</p>
+                    
+                    <!-- Added Feature Specifications -->
+                    <div class="space-y-2.5 mb-4">
+                        <div class="flex items-center gap-2.5 text-xs text-slate-600 dark:text-slate-300">
+                            <i class="fas fa-paw text-[#2EC4B6] text-xs shrink-0"></i>
+                            <span>Smart Pet Immunity (Ignores pets up to 25kg / 55lbs)</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-xs text-slate-600 dark:text-slate-300">
+                            <i class="fas fa-bullseye text-[#2EC4B6] text-xs shrink-0"></i>
+                            <span>12m Long-Range 110° Wide Detection Cone</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-xs text-slate-600 dark:text-slate-300">
+                            <i class="fas fa-bell text-[#2EC4B6] text-xs shrink-0"></i>
+                            <span>Instant Push Notification & Siren Trigger</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pt-3.5 border-t border-slate-100 dark:border-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center justify-between">
+                    <span class="flex items-center gap-1.5"><i class="fas fa-check text-[#2EC4B6]"></i> 0% Pet False Alarms</span>
+                    <span class="text-slate-400 text-[11px]">Wireless 2-Yr Battery</span>
+                </div>
             </div>
+
             <!-- Smart Alarms -->
-            <div class="reveal bg-gradient-to-br from-[#2EC4B6] to-[#1A3A5C] rounded-3xl p-6 text-white card-hover animation-delay-600 col-span-1 lg:col-span-2">
-                <div class="flex flex-col md:flex-row items-start md:items-center gap-6">
-                    <div class="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center flex-shrink-0"><i class="fas fa-bell text-white text-3xl"></i></div>
+            <div class="reveal bg-gradient-to-r from-[#1A3A5C] via-[#133758] to-[#0A2640] rounded-3xl p-7 text-white card-hover animation-delay-600 col-span-1 lg:col-span-2 border border-slate-200/20 dark:border-[#30363D] shadow-xl relative overflow-hidden group">
+                <div class="absolute -bottom-10 -right-10 w-48 h-48 bg-[#2EC4B6]/15 rounded-full blur-2xl pointer-events-none"></div>
+                <div class="flex flex-col md:flex-row items-start md:items-center gap-6 relative z-10">
+                    <div class="w-16 h-16 rounded-2xl bg-[#2EC4B6]/20 text-[#2EC4B6] border border-[#2EC4B6]/30 flex items-center justify-center flex-shrink-0 text-3xl group-hover:scale-110 transition-transform">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-[10px] font-black tracking-widest uppercase bg-[#2EC4B6]/20 text-[#2EC4B6] px-2.5 py-0.5 rounded-full">Instant Response</span>
+                            <span class="text-xs text-white/60">• 110dB Alarm Hub</span>
+                        </div>
+                        <h3 class="font-black text-2xl text-white mb-2" style="font-family:'Poppins',sans-serif;">Smart Alarm Ecosystem</h3>
+                        <p class="text-slate-200 text-sm leading-relaxed">Multi-zone alarm with panic buttons, acoustic glass-break sensors, siren integration & instant dispatch. Connected to 24/7 monitoring center for uninterrupted protection.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════ SMART APP ECOSYSTEM & MOBILE COMMAND ═══════ -->
+<section class="pt-10 pb-20 lg:pt-14 lg:pb-28 bg-[#F4F7FA] dark:bg-[#161B22] relative overflow-hidden">
+    <!-- Subtle background patterns -->
+    <div class="absolute top-1/2 -left-20 w-80 h-80 bg-[#2EC4B6]/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-10 -right-20 w-80 h-80 bg-[#1A3A5C]/20 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-12 reveal">
+            <span class="section-label mb-3 inline-flex"><i class="fas fa-mobile-screen-button"></i> Mobile Ecosystem</span>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white mt-3" style="font-family:'Poppins',sans-serif;">
+                Total Control in the <span class="text-[#2EC4B6]">Palm of Your Hand</span>
+            </h2>
+            <p class="text-slate-500 dark:text-slate-400 text-base md:text-lg mt-3 max-w-2xl mx-auto">
+                Arm your system, view live 4K streams, grant guest access, and manage all your smart security devices from our unified iOS & Android app.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto">
+            <!-- Left: High-End Smartphone App UI Mockup -->
+            <div class="lg:col-span-5 flex justify-center reveal">
+                <div class="w-full max-w-[320px] bg-slate-900 rounded-[44px] p-3.5 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.3)] border-4 border-slate-800 relative">
+                    <!-- Phone Notch/Speaker -->
+                    <div class="w-28 h-4 bg-slate-800 rounded-full mx-auto mb-3 flex items-center justify-center">
+                        <div class="w-3 h-3 rounded-full bg-slate-900 mr-2"></div>
+                        <div class="w-8 h-1 bg-slate-700 rounded-full"></div>
+                    </div>
+
+                    <!-- App Screen Container -->
+                    <div class="bg-[#0D1117] rounded-[34px] p-4 text-white overflow-hidden border border-slate-800/80">
+                        <!-- App Top Bar -->
+                        <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-800">
+                            <div>
+                                <div class="text-[10px] text-slate-400 uppercase tracking-wider">Property</div>
+                                <div class="font-black text-xs text-white flex items-center gap-1">
+                                    <i class="fas fa-house text-[#2EC4B6] text-[10px]"></i> My Residence
+                                </div>
+                            </div>
+                            <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-[10px] font-bold">
+                                <i class="fas fa-circle text-[6px] animate-pulse"></i> Armed
+                            </span>
+                        </div>
+
+                        <!-- Quick Security Mode Selector -->
+                        <div class="grid grid-cols-3 gap-1.5 p-1 bg-slate-900/90 rounded-xl mb-3.5 text-center text-[10px] font-bold border border-slate-800">
+                            <div class="py-1.5 rounded-lg bg-[#2EC4B6] text-slate-900 shadow">Home</div>
+                            <div class="py-1.5 rounded-lg text-slate-400">Away</div>
+                            <div class="py-1.5 rounded-lg text-slate-400">Night</div>
+                        </div>
+
+                        <!-- Live Camera Preview Card -->
+                        <div class="relative rounded-2xl overflow-hidden mb-3.5 bg-slate-800 border border-slate-700/60 aspect-[16/10]">
+                            <img src="assets/images/hero-home1.jpg" alt="Front Yard Live Stream" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30"></div>
+                            <div class="absolute top-2 left-2 bg-black/60 backdrop-blur-md px-2 py-0.5 rounded text-[8px] font-bold text-white flex items-center gap-1">
+                                <i class="fas fa-circle text-red-500 text-[5px]"></i> Front Yard • LIVE
+                            </div>
+                            <div class="absolute bottom-2 left-2 right-2 flex items-center justify-between text-[9px] text-white">
+                                <span class="bg-[#2EC4B6]/20 text-[#2EC4B6] px-1.5 py-0.5 rounded font-mono">0 Motion</span>
+                                <span class="font-mono text-white/70">4K HDR</span>
+                            </div>
+                        </div>
+
+                        <!-- Smart Lock Control Card -->
+                        <div class="p-3 rounded-2xl bg-slate-900/90 border border-slate-800 mb-3.5 flex items-center justify-between">
+                            <div class="flex items-center gap-2.5">
+                                <div class="w-8 h-8 rounded-xl bg-[#2EC4B6]/20 text-[#2EC4B6] flex items-center justify-center text-sm">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                                <div>
+                                    <div class="text-[11px] font-bold text-white">Main Entrance</div>
+                                    <div class="text-[9px] text-emerald-400">Locked • Battery 94%</div>
+                                </div>
+                            </div>
+                            <button class="px-3 py-1 rounded-lg bg-[#1A3A5C] text-white text-[10px] font-bold hover:bg-[#2EC4B6] hover:text-slate-900 transition-colors">
+                                Unlock
+                            </button>
+                        </div>
+
+                        <!-- Recent Activity Log Item -->
+                        <div class="p-2.5 rounded-xl bg-slate-900/60 border border-slate-800/60 flex items-center justify-between text-[10px]">
+                            <div class="flex items-center gap-2 text-slate-300">
+                                <i class="fas fa-fingerprint text-[#2EC4B6] text-xs"></i>
+                                <span>Sarah unlocked door</span>
+                            </div>
+                            <span class="text-slate-500 text-[9px]">4:12 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Features & Integrations -->
+            <div class="lg:col-span-7 space-y-6 reveal animation-delay-200">
+                <!-- Feature 1: Instant Alerts -->
+                <div class="bg-white dark:bg-[#0D1117] p-6 rounded-3xl border border-slate-200/80 dark:border-[#30363D] shadow-sm hover:shadow-lg transition-all flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-[#2EC4B6]/15 text-[#2EC4B6] flex items-center justify-center text-xl shrink-0 mt-1">
+                        <i class="fas fa-bell"></i>
+                    </div>
                     <div>
-                        <h3 class="font-black text-xl mb-2" style="font-family:'Poppins',sans-serif;">Smart Alarm Ecosystem</h3>
-                        <p class="text-white/70 text-sm leading-relaxed">Multi-zone alarm with panic buttons, glass-break sensors, siren integration & instant police dispatch. Connected to 24/7 monitoring center for uninterrupted protection.</p>
+                        <h3 class="font-black text-lg text-slate-900 dark:text-white mb-1.5" style="font-family:'Poppins',sans-serif;">Rich Real-Time Notifications</h3>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                            Receive interactive push alerts with snapshot previews directly to your smartphone and smartwatch the millisecond activity is detected.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 2: Digital Key Sharing -->
+                <div class="bg-white dark:bg-[#0D1117] p-6 rounded-3xl border border-slate-200/80 dark:border-[#30363D] shadow-sm hover:shadow-lg transition-all flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-indigo-500/15 text-indigo-500 dark:text-indigo-400 flex items-center justify-center text-xl shrink-0 mt-1">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-black text-lg text-slate-900 dark:text-white mb-1.5" style="font-family:'Poppins',sans-serif;">Remote Key Sharing & Temporary Passes</h3>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                            Generate one-time PIN codes or scheduled weekly passes for guests, cleaners, and deliveries. Receive entry confirmation alerts instantly.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 3: Smart Home Integrations -->
+                <div class="bg-white dark:bg-[#0D1117] p-6 rounded-3xl border border-slate-200/80 dark:border-[#30363D] shadow-sm hover:shadow-lg transition-all flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-500/15 text-emerald-500 dark:text-emerald-400 flex items-center justify-center text-xl shrink-0 mt-1">
+                        <i class="fas fa-house-signal"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-black text-lg text-slate-900 dark:text-white mb-1.5" style="font-family:'Poppins',sans-serif;">Seamless Voice & Ecosystem Pairing</h3>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-3">
+                            Full voice control and multi-device routines compatible with all major smart home standards.
+                        </p>
+                        <!-- Integration Ecosystem Pills -->
+                        <div class="flex flex-wrap gap-2 text-xs font-semibold text-slate-600 dark:text-slate-300">
+                            <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center gap-1.5">
+                                <i class="fab fa-apple text-slate-800 dark:text-white"></i> Apple Home
+                            </span>
+                            <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center gap-1.5">
+                                <i class="fab fa-google text-[#4285F4]"></i> Google Home
+                            </span>
+                            <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center gap-1.5">
+                                <i class="fab fa-amazon text-[#FF9900]"></i> Alexa
+                            </span>
+                            <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center gap-1.5">
+                                <i class="fas fa-network-wired text-[#2EC4B6]"></i> Matter
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -117,7 +348,7 @@
 </section>
 
 <!-- ═══════ PACKAGE FINDER / SECURITY PACKAGES ═══════ -->
-<section class="py-20 lg:py-28 bg-[#F4F7FA] dark:bg-[#161B22]" id="package-finder">
+<section class="py-20 lg:py-28 bg-white dark:bg-[#0D1117]" id="package-finder">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12 reveal">
             <span class="section-label mb-4 inline-flex"><i class="fas fa-sliders"></i> Security Packages</span>
@@ -168,6 +399,160 @@
     </div>
 </section>
 
+<!-- ═══════ PROVEN DEPLOYMENTS & CASE STUDIES ═══════ -->
+<section class="py-20 lg:py-28 bg-[#F4F7FA] dark:bg-[#161B22] relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16 reveal">
+            <span class="section-label mb-4 inline-flex"><i class="fas fa-award"></i> Proven Deployments</span>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white mt-4" style="font-family:'Poppins',sans-serif;">
+                Enterprise & Luxury <span class="text-[#2EC4B6]">Case Studies</span>
+            </h2>
+            <p class="text-slate-500 dark:text-slate-400 text-lg mt-4 max-w-2xl mx-auto">
+                Explore how SecureVista engineered zero-blind-spot protection for commercial campuses, luxury estates, and multi-branch retail stores.
+            </p>
+        </div>
+
+        <!-- 3 Case Study Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Case Study 1 -->
+            <div class="reveal bg-white dark:bg-[#0D1117] rounded-3xl overflow-hidden border border-slate-200/80 dark:border-[#30363D] shadow-sm hover:shadow-xl transition-all duration-300 card-hover flex flex-col justify-between group">
+                <div>
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="assets/images/casestudy-techpark.jpg" alt="Commercial Tech Park Security" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='assets/images/hero-home2-slide2.jpg'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="absolute top-3 left-3">
+                            <span class="px-3 py-1 rounded-full bg-[#1A3A5C] text-white text-xs font-bold shadow-md">🏢 Tech Campus</span>
+                        </div>
+                        <div class="absolute bottom-3 left-3 right-3 text-white">
+                            <div class="text-xs text-white/70">Prestige Silicon Hub</div>
+                            <div class="font-bold text-sm">120,000 Sq.Ft Perimeter</div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <!-- Key Metrics Grid -->
+                        <div class="grid grid-cols-3 gap-2 pb-4 mb-4 border-b border-slate-100 dark:border-slate-800 text-center">
+                            <div class="bg-slate-50 dark:bg-[#161B22] p-2 rounded-xl">
+                                <div class="text-xs font-black text-[#2EC4B6]">32x</div>
+                                <div class="text-[10px] text-slate-400">4K PTZ</div>
+                            </div>
+                            <div class="bg-slate-50 dark:bg-[#161B22] p-2 rounded-xl">
+                                <div class="text-xs font-black text-indigo-500 dark:text-indigo-400">8x</div>
+                                <div class="text-[10px] text-slate-400">Turnstiles</div>
+                            </div>
+                            <div class="bg-slate-50 dark:bg-[#161B22] p-2 rounded-xl">
+                                <div class="text-xs font-black text-emerald-500">99.9%</div>
+                                <div class="text-[10px] text-slate-400">Uptime</div>
+                            </div>
+                        </div>
+                        <h4 class="font-black text-lg text-slate-900 dark:text-white mb-2" style="font-family:'Poppins',sans-serif;">Integrated Campus Surveillance</h4>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">
+                            Installed continuous 4K AI coverage with automatic vehicle number plate recognition (LPR) and biometric turnstiles across all 3 entry lobbies.
+                        </p>
+                        <blockquote class="bg-slate-50 dark:bg-[#161B22] p-3 rounded-2xl border-l-4 border-[#2EC4B6] text-xs italic text-slate-600 dark:text-slate-300">
+                            "Zero false alarms and seamless smartphone monitoring for our facilities management team."
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="px-6 pb-6 pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs">
+                    <span class="text-slate-400">Deployed in 3 Days</span>
+                    <span class="text-[#2EC4B6] font-bold flex items-center gap-1">5.0 ★★★★★</span>
+                </div>
+            </div>
+
+            <!-- Case Study 2 -->
+            <div class="reveal bg-white dark:bg-[#0D1117] rounded-3xl overflow-hidden border border-slate-200/80 dark:border-[#30363D] shadow-sm hover:shadow-xl transition-all duration-300 card-hover flex flex-col justify-between group animation-delay-200">
+                <div>
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="assets/images/pic/Untitled design (7).png" alt="Luxury Villa Security" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='assets/images/hero-home1.jpg'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="absolute top-3 left-3">
+                            <span class="px-3 py-1 rounded-full bg-[#2EC4B6] text-white text-xs font-bold shadow-md">🏡 Luxury Estate</span>
+                        </div>
+                        <div class="absolute bottom-3 left-3 right-3 text-white">
+                            <div class="text-xs text-white/70">The Horizon Villa</div>
+                            <div class="font-bold text-sm">Jubilee Hills Estate</div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <!-- Key Metrics Grid -->
+                        <div class="grid grid-cols-3 gap-2 pb-4 mb-4 border-b border-slate-100 dark:border-slate-800 text-center">
+                            <div class="bg-slate-50 dark:bg-[#161B22] p-2 rounded-xl">
+                                <div class="text-xs font-black text-[#2EC4B6]">8x</div>
+                                <div class="text-[10px] text-slate-400">4K AI Cams</div>
+                            </div>
+                            <div class="bg-slate-50 dark:bg-[#161B22] p-2 rounded-xl">
+                                <div class="text-xs font-black text-indigo-500 dark:text-indigo-400">3x</div>
+                                <div class="text-[10px] text-slate-400">Face Locks</div>
+                            </div>
+                            <div class="bg-slate-50 dark:bg-[#161B22] p-2 rounded-xl">
+                                <div class="text-xs font-black text-emerald-500">100%</div>
+                                <div class="text-[10px] text-slate-400">Concealed</div>
+                            </div>
+                        </div>
+                        <h4 class="font-black text-lg text-slate-900 dark:text-white mb-2" style="font-family:'Poppins',sans-serif;">Complete Perimeter Fortification</h4>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">
+                            Installed smart locks across all exterior entries, laser boundary tripwires around garden fences, and two-way video doorbell intercom.
+                        </p>
+                        <blockquote class="bg-slate-50 dark:bg-[#161B22] p-3 rounded-2xl border-l-4 border-[#2EC4B6] text-xs italic text-slate-600 dark:text-slate-300">
+                            "Cleanest installation we have seen. Zero visible wires, and remote unlock for deliveries is amazing."
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="px-6 pb-6 pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs">
+                    <span class="text-slate-400">Same-Day 6h Install</span>
+                    <span class="text-[#2EC4B6] font-bold flex items-center gap-1">5.0 ★★★★★</span>
+                </div>
+            </div>
+
+            <!-- Case Study 3 -->
+            <div class="reveal bg-white dark:bg-[#0D1117] rounded-3xl overflow-hidden border border-slate-200/80 dark:border-[#30363D] shadow-sm hover:shadow-xl transition-all duration-300 card-hover flex flex-col justify-between group animation-delay-400">
+                <div>
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="assets/images/pic/Untitled design (11).png" alt="Retail Chain Security" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='assets/images/about-story.jpg'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="absolute top-3 left-3">
+                            <span class="px-3 py-1 rounded-full bg-indigo-600 text-white text-xs font-bold shadow-md">💎 Retail Chain</span>
+                        </div>
+                        <div class="absolute bottom-3 left-3 right-3 text-white">
+                            <div class="text-xs text-white/70">Aura Gold & Diamonds</div>
+                            <div class="font-bold text-sm">6 Store Locations</div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <!-- Key Metrics Grid -->
+                        <div class="grid grid-cols-3 gap-2 pb-4 mb-4 border-b border-slate-100 dark:border-slate-800 text-center">
+                            <div class="bg-slate-50 dark:bg-[#161B22] p-2 rounded-xl">
+                                <div class="text-xs font-black text-[#2EC4B6]">96x</div>
+                                <div class="text-[10px] text-slate-400">Dome Cams</div>
+                            </div>
+                            <div class="bg-slate-50 dark:bg-[#161B22] p-2 rounded-xl">
+                                <div class="text-xs font-black text-indigo-500 dark:text-indigo-400">6x</div>
+                                <div class="text-[10px] text-slate-400">Vault NVRs</div>
+                            </div>
+                            <div class="bg-slate-50 dark:bg-[#161B22] p-2 rounded-xl">
+                                <div class="text-xs font-black text-emerald-500">24/7</div>
+                                <div class="text-[10px] text-slate-400">Cloud Sync</div>
+                            </div>
+                        </div>
+                        <h4 class="font-black text-lg text-slate-900 dark:text-white mb-2" style="font-family:'Poppins',sans-serif;">Multi-Store Central Vault System</h4>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">
+                            Synchronized 6 retail branches under a unified dashboard with acoustic glass-break sensors, silent panic buttons, and 60-day backup.
+                        </p>
+                        <blockquote class="bg-slate-50 dark:bg-[#161B22] p-3 rounded-2xl border-l-4 border-[#2EC4B6] text-xs italic text-slate-600 dark:text-slate-300">
+                            "The multi-store matrix allows our executive board to audit all branches in 4K resolution simultaneously."
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="px-6 pb-6 pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs">
+                    <span class="text-slate-400">Multi-Location Mesh</span>
+                    <span class="text-[#2EC4B6] font-bold flex items-center gap-1">5.0 ★★★★★</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- ═══════ GALLERY ═══════ -->
 <section class="py-20 lg:py-28 bg-white dark:bg-[#0D1117]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -180,38 +565,233 @@
 
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
             <div class="reveal rounded-2xl overflow-hidden img-zoom aspect-square">
-                <img src="assets/images/hero-home1.jpg" alt="Residential Camera Installation" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-[#1A3A5C]/20 to-[#2EC4B6]/20 flex items-center justify-center\'><i class=\'fas fa-image text-3xl text-slate-300\'></i></div>'">
+                <img src="assets/images/pic/Untitled design (5).png" alt="360 Dome Camera Installation" class="w-full h-full object-cover" onerror="this.src='assets/images/hero-home1.jpg'">
             </div>
             <div class="reveal rounded-2xl overflow-hidden img-zoom aspect-square animation-delay-200">
-                <img src="assets/images/product-smartlock.jpg" alt="Smart Lock Setup" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-[#1A3A5C]/20 to-[#2EC4B6]/20 flex items-center justify-center\'><i class=\'fas fa-image text-3xl text-slate-300\'></i></div>'">
+                <img src="assets/images/pic/Untitled design (8).png" alt="Smart RFID Lock Setup" class="w-full h-full object-cover" onerror="this.src='assets/images/product-smartlock.jpg'">
             </div>
             <div class="reveal rounded-2xl overflow-hidden img-zoom aspect-square animation-delay-400">
-                <img src="assets/images/hero-home2-slide2.jpg" alt="Commercial Security" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-[#1A3A5C]/20 to-[#2EC4B6]/20 flex items-center justify-center\'><i class=\'fas fa-image text-3xl text-slate-300\'></i></div>'">
+                <img src="assets/images/gallery-commercial.jpg" alt="Commercial Security Installation" class="w-full h-full object-cover" onerror="this.src='assets/images/hero-home2-slide2.jpg'">
             </div>
             <div class="reveal rounded-2xl overflow-hidden img-zoom aspect-square animation-delay-200">
-                <img src="assets/images/product-alarm.jpg" alt="Alarm System Panel" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-[#1A3A5C]/20 to-[#2EC4B6]/20 flex items-center justify-center\'><i class=\'fas fa-image text-3xl text-slate-300\'></i></div>'">
+                <img src="assets/images/pic/Untitled design (13).png" alt="Touchscreen PIN Lock Setup" class="w-full h-full object-cover" onerror="this.src='assets/images/product-alarm.jpg'">
             </div>
             <div class="reveal rounded-2xl overflow-hidden img-zoom aspect-square animation-delay-400">
-                <img src="assets/images/product-doorbell.jpg" alt="Video Doorbell Install" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-[#1A3A5C]/20 to-[#2EC4B6]/20 flex items-center justify-center\'><i class=\'fas fa-image text-3xl text-slate-300\'></i></div>'">
+                <img src="assets/images/pic/Untitled design (10).png" alt="Smart Video Doorbell Install" class="w-full h-full object-cover" onerror="this.src='assets/images/product-doorbell.jpg'">
             </div>
             <div class="reveal rounded-2xl overflow-hidden img-zoom aspect-square animation-delay-600">
-                <img src="assets/images/about-story.jpg" alt="Installation Process" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-[#1A3A5C]/20 to-[#2EC4B6]/20 flex items-center justify-center\'><i class=\'fas fa-image text-3xl text-slate-300\'></i></div>'">
+                <img src="assets/images/pic/Untitled design (12).png" alt="Video Doorbell Chime Setup" class="w-full h-full object-cover" onerror="this.src='assets/images/about-story.jpg'">
             </div>
         </div>
     </div>
 </section>
 
-<!-- ═══════ EMERGENCY CTA ═══════ -->
-<section class="py-16 bg-gradient-to-r from-[#0D1117] to-[#1A3A5C] relative overflow-hidden">
-    <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle, #2EC4B6 1px, transparent 1px); background-size: 20px 20px;"></div>
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div class="reveal">
-            <i class="fas fa-triangle-exclamation text-[#2EC4B6] text-3xl mb-4"></i>
-            <h2 class="text-2xl md:text-3xl font-black text-white mb-4" style="font-family:'Poppins',sans-serif;">Need Urgent Security Installation?</h2>
-            <p class="text-white/60 text-base mb-8 max-w-xl mx-auto">Emergency installations available within 2 hours. Call now or reach us on WhatsApp for immediate assistance.</p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="tel:+919876543210" class="btn-primary px-8 py-4 text-sm"><i class="fas fa-phone text-xs"></i> +91 98765 43210</a>
-                <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="btn-secondary btn-secondary-white px-8 py-4 text-sm"><i class="fab fa-whatsapp text-sm"></i> WhatsApp Us</a>
+<!-- ═══════ TESTIMONIALS ═══════ -->
+<section class="py-20 lg:py-28 bg-[#F4F7FA] dark:bg-[#161B22] relative overflow-hidden border-t border-slate-200/80 dark:border-[#30363D]">
+    <!-- Ambient glow -->
+    <div class="absolute -top-32 -right-32 w-80 h-80 bg-[#2EC4B6]/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-32 -left-32 w-80 h-80 bg-[#1A3A5C]/20 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16 reveal">
+            <span class="section-label mb-4 inline-flex"><i class="fas fa-quote-left"></i> Testimonials</span>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white mt-4" style="font-family:'Poppins',sans-serif;">
+                Trusted by <span class="text-[#2EC4B6]">Industry Leaders</span>
+            </h2>
+            <p class="text-slate-500 dark:text-slate-400 text-base md:text-lg mt-4 max-w-2xl mx-auto">
+                Real feedback from corporate developers, luxury estate owners, and commercial retail chains secured by SecureVista.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="reveal bg-white dark:bg-[#0D1117] rounded-3xl p-8 border border-slate-200/80 dark:border-[#30363D] shadow-sm hover:shadow-xl transition-all duration-300 card-hover flex flex-col justify-between group">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center text-amber-400 text-sm gap-1">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="px-2.5 py-0.5 rounded-full bg-[#1A3A5C]/10 dark:bg-[#2EC4B6]/10 text-[#1A3A5C] dark:text-[#2EC4B6] text-[10px] font-black uppercase">🏢 Tech Campus</span>
+                    </div>
+                    <blockquote class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed mb-6 italic">
+                        "The integrated 4K PTZ cameras and biometric turnstile deployment across our 120,000 sq.ft campus was completed in 3 days. Zero false alarms and our facility team has full mobile control."
+                    </blockquote>
+                </div>
+                <div class="pt-5 border-t border-slate-100 dark:border-slate-800 flex items-center gap-4">
+                    <img src="assets/images/testimonial-vikram.jpg" alt="Vikram Sethi" class="w-13 h-13 w-12 h-12 rounded-full object-cover shadow-md border-2 border-[#2EC4B6]/40 flex-shrink-0" onerror="this.outerHTML='<div class=\'w-12 h-12 rounded-full bg-[#1A3A5C] text-white font-bold flex items-center justify-center\'>VS</div>'">
+                    <div>
+                        <div class="font-black text-sm text-slate-900 dark:text-white" style="font-family:'Poppins',sans-serif;">Vikram Sethi</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Director, Prestige Silicon Hub</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="reveal bg-white dark:bg-[#0D1117] rounded-3xl p-8 border border-slate-200/80 dark:border-[#30363D] shadow-sm hover:shadow-xl transition-all duration-300 card-hover flex flex-col justify-between group animation-delay-200">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center text-amber-400 text-sm gap-1">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-500 text-[10px] font-black uppercase">🏡 Luxury Estate</span>
+                    </div>
+                    <blockquote class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed mb-6 italic">
+                        "SecureVista's engineers were punctual, completely concealed all cabling, and the 3D Face-ID smart locks work like magic. The perimeter laser alerts give us total peace of mind."
+                    </blockquote>
+                </div>
+                <div class="pt-5 border-t border-slate-100 dark:border-slate-800 flex items-center gap-4">
+                    <img src="assets/images/testimonial-kavita.jpg" alt="Kavita Nair" class="w-12 h-12 rounded-full object-cover shadow-md border-2 border-emerald-500/40 flex-shrink-0" onerror="this.outerHTML='<div class=\'w-12 h-12 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center\'>KN</div>'">
+                    <div>
+                        <div class="font-black text-sm text-slate-900 dark:text-white" style="font-family:'Poppins',sans-serif;">Kavita Nair</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Estate Owner, The Horizon Villa</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="reveal bg-white dark:bg-[#0D1117] rounded-3xl p-8 border border-slate-200/80 dark:border-[#30363D] shadow-sm hover:shadow-xl transition-all duration-300 card-hover flex flex-col justify-between group animation-delay-400">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center text-amber-400 text-sm gap-1">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="px-2.5 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 text-[10px] font-black uppercase">💎 Retail Chain</span>
+                    </div>
+                    <blockquote class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed mb-6 italic">
+                        "Managing video feeds across 6 jewelry branches from a unified central matrix has made executive audits effortless. Their 24/7 SLA and 38-minute emergency response is top-tier."
+                    </blockquote>
+                </div>
+                <div class="pt-5 border-t border-slate-100 dark:border-slate-800 flex items-center gap-4">
+                    <img src="assets/images/testimonial-rohit.jpg" alt="Rohit Verma" class="w-12 h-12 rounded-full object-cover shadow-md border-2 border-indigo-500/40 flex-shrink-0" onerror="this.outerHTML='<div class=\'w-12 h-12 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center\'>RV</div>'">
+                    <div>
+                        <div class="font-black text-sm text-slate-900 dark:text-white" style="font-family:'Poppins',sans-serif;">Rohit Verma</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Operations Head, Aura Gold</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════ EMERGENCY RAPID DISPATCH CTA ═══════ -->
+<section class="py-16 lg:py-24 bg-white dark:bg-[#0D1117] relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative rounded-3xl lg:rounded-[2.5rem] bg-gradient-to-br from-[#0B132B] via-[#101F3C] to-[#0A2640] text-white p-8 sm:p-12 lg:p-16 border border-slate-700/60 dark:border-[#2EC4B6]/20 shadow-2xl overflow-hidden reveal">
+            <!-- Ambient Glow Background Effects -->
+            <div class="absolute -top-32 -left-32 w-80 h-80 bg-red-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-[#2EC4B6]/15 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: radial-gradient(circle, #2EC4B6 1px, transparent 1px); background-size: 24px 24px;"></div>
+
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                <!-- Left 7 Cols: Urgent Copy, Guarantees & Actions -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/15 border border-red-500/30 text-red-400 text-xs font-black uppercase tracking-wider mb-6">
+                        <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-ping"></span>
+                        2-Hour Rapid Emergency Dispatch
+                    </div>
+                    
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-4" style="font-family:'Poppins',sans-serif;">
+                        Need Immediate <span class="text-[#2EC4B6]">Security Installation?</span>
+                    </h2>
+                    
+                    <p class="text-slate-300 text-base sm:text-lg leading-relaxed mb-6 max-w-2xl mx-auto lg:mx-0">
+                        Break-in attempt, moving into a new property, or critical hardware failure? Our master engineers deploy within 120 minutes with fully-equipped mobile service units.
+                    </p>
+
+                    <!-- Emergency Highlights -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8 text-xs font-semibold text-slate-200">
+                        <div class="bg-white/5 backdrop-blur-sm p-3 rounded-2xl border border-white/10 flex items-center gap-2.5 justify-center sm:justify-start">
+                            <i class="fas fa-bolt text-[#2EC4B6] text-sm"></i>
+                            <span>120-Min Arrival</span>
+                        </div>
+                        <div class="bg-white/5 backdrop-blur-sm p-3 rounded-2xl border border-white/10 flex items-center gap-2.5 justify-center sm:justify-start">
+                            <i class="fas fa-truck-fast text-[#2EC4B6] text-sm"></i>
+                            <span>Stocked Vans</span>
+                        </div>
+                        <div class="bg-white/5 backdrop-blur-sm p-3 rounded-2xl border border-white/10 flex items-center gap-2.5 justify-center sm:justify-start">
+                            <i class="fas fa-shield-check text-[#2EC4B6] text-sm"></i>
+                            <span>Same-Day Live</span>
+                        </div>
+                    </div>
+
+                    <!-- Direct Action Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="tel:+919876543210" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-red-600 hover:bg-red-500 text-white font-black text-sm shadow-lg shadow-red-600/30 hover:scale-[1.02] transition-all cursor-pointer">
+                            <i class="fas fa-phone-volume text-base animate-pulse"></i>
+                            <span>Call Hotline: +91 98765 43210</span>
+                        </a>
+                        <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-lg shadow-emerald-600/20 hover:scale-[1.02] transition-all cursor-pointer">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                            <span>WhatsApp Priority</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right 5 Cols: Live Dispatch Console HUD -->
+                <div class="lg:col-span-5">
+                    <div class="bg-[#0D182E]/90 backdrop-blur-md rounded-3xl p-6 border border-slate-700/80 shadow-xl space-y-5">
+                        <!-- Dispatch Header -->
+                        <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+                            <div class="flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                <span class="text-xs font-black text-white uppercase tracking-wider">Live Dispatch Hub</span>
+                            </div>
+                            <span class="text-[10px] font-mono text-slate-400">STATUS: ACTIVE</span>
+                        </div>
+
+                        <!-- Metric Status Rows -->
+                        <div class="space-y-3">
+                            <div class="p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800/80 flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-9 h-9 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-sm">
+                                        <i class="fas fa-van-shuttle"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs font-bold text-white">Mobile Fleet Status</div>
+                                        <div class="text-[10px] text-slate-400">4 Rapid Response Vans Available</div>
+                                    </div>
+                                </div>
+                                <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 text-[10px] font-bold">READY</span>
+                            </div>
+
+                            <div class="p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800/80 flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-9 h-9 rounded-xl bg-[#2EC4B6]/15 text-[#2EC4B6] flex items-center justify-center text-sm">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs font-bold text-white">Avg. On-Site Arrival</div>
+                                        <div class="text-[10px] text-slate-400">Metro & Suburban Radius</div>
+                                    </div>
+                                </div>
+                                <span class="font-mono text-xs font-black text-[#2EC4B6]">38 Mins</span>
+                            </div>
+
+                            <div class="p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800/80 flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-9 h-9 rounded-xl bg-indigo-500/15 text-indigo-400 flex items-center justify-center text-sm">
+                                        <i class="fas fa-headset"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs font-bold text-white">Emergency Desk</div>
+                                        <div class="text-[10px] text-slate-400">Zero Hold-Time Guarantee</div>
+                                    </div>
+                                </div>
+                                <span class="px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-400 text-[10px] font-bold">24/7 LIVE</span>
+                            </div>
+                        </div>
+
+                        <!-- 60-Sec Quick Callback Bar -->
+                        <div class="pt-3 border-t border-slate-800">
+                            <form onsubmit="event.preventDefault(); alert('Emergency request received. A dispatch technician is calling your number now.');" class="flex gap-2">
+                                <input type="tel" placeholder="Enter Phone for 60s Callback" required class="flex-1 px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#2EC4B6]">
+                                <button type="submit" class="px-4 py-2.5 rounded-xl bg-[#2EC4B6] text-slate-900 font-bold text-xs hover:bg-[#2EC4B6]/90 transition-all shrink-0">
+                                    Call Me
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

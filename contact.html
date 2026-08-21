@@ -16,10 +16,17 @@
 
 <!-- Hero -->
 <section class="relative py-24 lg:py-32 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-r from-[#1A3A5C] to-[#0D1117]"></div>
-    <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle, #2EC4B6 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <!-- Background Image with Gradient Overlay -->
+    <img src="assets/images/contact-hero.jpg" alt="24/7 Security Customer Support" class="absolute inset-0 w-full h-full object-cover scale-105" onerror="this.style.display='none'">
+    <div class="absolute inset-0 bg-gradient-to-t from-[#0D1117] via-[#0D1117]/85 to-[#0D1117]/75 backdrop-blur-[1px]"></div>
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle, #2EC4B6 1px, transparent 1px); background-size: 30px 30px;"></div>
+    
+    <!-- Floating ambient glow -->
+    <div class="absolute top-10 left-10 w-72 h-72 rounded-full bg-[#2EC4B6]/10 blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-[#1A3A5C]/30 blur-3xl pointer-events-none"></div>
+
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white/80 text-xs font-bold tracking-widest uppercase mb-6 animate-fade-in-up"><i class="fas fa-envelope text-[#2EC4B6]"></i> Contact</span>
+        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-[#2EC4B6] text-xs font-bold tracking-widest uppercase mb-6 animate-fade-in-up"><i class="fas fa-headset"></i> 24/7 Customer Support</span>
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 animate-fade-in-up animation-delay-200" style="font-family:'Poppins',sans-serif;">Get In <span class="gradient-text-light">Touch</span></h1>
         <p class="text-white/70 text-lg max-w-2xl mx-auto animate-fade-in-up animation-delay-400">We'd love to hear from you. Book a free consultation or reach our 24/7 support team.</p>
     </div>

@@ -1029,15 +1029,20 @@ select.form-input {
     display: grid;
     gap: 1.5rem;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto auto;
+    grid-template-rows: 1fr 1fr;
 }
 .bento-grid .bento-large {
     grid-row: span 2;
+}
+.bento-grid > div {
+    display: flex;
+    flex-direction: column;
 }
 
 @media (max-width: 768px) {
     .bento-grid {
         grid-template-columns: 1fr;
+        grid-template-rows: auto;
     }
     .bento-grid .bento-large {
         grid-row: span 1;

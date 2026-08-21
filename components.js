@@ -36,7 +36,12 @@ function toggleDir() {
 function injectNav() {
     const el = document.getElementById('main-nav');
     if (!el) return;
-    const page = location.pathname.split('/').pop() || 'index.html';
+
+    // Robust active page detection
+    const rawPath = decodeURIComponent(location.pathname).toLowerCase();
+    const cleanFilename = rawPath.split('/').pop().split('?')[0].split('#')[0];
+    const page = (!cleanFilename || cleanFilename === '' || cleanFilename === 'index.html') ? 'index.html' : cleanFilename;
+
     const links = [
         { href: 'index.html', label: 'Home' },
         { href: 'home2.html', label: 'Home 2' },
@@ -47,11 +52,17 @@ function injectNav() {
     ];
 
     const navLinksHTML = links.map(l => {
-        const isActive = page === l.href || (page === '' && l.href === 'index.html');
-        const activeClass = isActive ? 'text-[#1A3A5C] dark:text-[#2EC4B6] font-extrabold' : 'text-slate-700 dark:text-slate-300 hover:text-[#1A3A5C] dark:hover:text-[#2EC4B6]';
-        return `<a href="${l.href}" class="${activeClass} font-semibold text-sm transition-colors relative group">
+        const isActive = (page === l.href.toLowerCase());
+        const textClass = isActive
+            ? 'text-[#2EC4B6] dark:text-[#2EC4B6] font-bold'
+            : 'text-slate-700 dark:text-slate-300 hover:text-[#1A3A5C] dark:hover:text-[#2EC4B6] font-medium';
+        const underlineSpan = isActive
+            ? '<span class="absolute -bottom-1.5 left-0 w-full h-[2.5px] bg-[#2EC4B6] rounded-full shadow-[0_0_8px_rgba(46,196,182,0.6)]"></span>'
+            : '<span class="absolute -bottom-1.5 left-0 w-0 h-[2.5px] bg-[#2EC4B6] rounded-full transition-all duration-300 group-hover:w-full"></span>';
+
+        return `<a href="${l.href}" class="${textClass} text-sm transition-colors relative py-1 group">
             ${l.label}
-            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#2EC4B6] transition-all group-hover:w-full ${isActive ? 'w-full' : ''}"></span>
+            ${underlineSpan}
         </a>`;
     }).join('');
 
@@ -78,23 +89,23 @@ function injectNav() {
                 </a>
 
                 <!-- Desktop Nav -->
-                <div class="hidden xl:flex items-center gap-5">
+                <div class="hidden lg:flex items-center gap-6">
                     ${navLinksHTML}
                 </div>
 
                 <!-- Right CTAs + Icons -->
                 <div class="flex items-center gap-2">
                     <!-- RTL Toggle -->
-                    <button id="nav-dir-btn" onclick="toggleDir()" class="hidden xl:flex w-9 h-9 items-center justify-center rounded-xl bg-slate-100 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] text-[10px] font-black text-slate-600 dark:text-slate-400 hover:border-[#2EC4B6]/50 transition-all" title="Toggle Direction">${document.documentElement.getAttribute('dir') === 'rtl' ? 'RTL' : 'LTR'}</button>
+                    <button id="nav-dir-btn" onclick="toggleDir()" class="hidden lg:flex w-9 h-9 items-center justify-center rounded-xl bg-slate-100 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] text-[10px] font-black text-slate-600 dark:text-slate-400 hover:border-[#2EC4B6]/50 transition-all" title="Toggle Direction">${document.documentElement.getAttribute('dir') === 'rtl' ? 'RTL' : 'LTR'}</button>
                     <!-- Dark Mode -->
-                    <button onclick="toggleTheme()" class="hidden xl:flex w-9 h-9 items-center justify-center rounded-xl bg-slate-100 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] hover:border-[#2EC4B6]/50 transition-all" title="Toggle Theme" aria-label="Toggle dark mode">
+                    <button onclick="toggleTheme()" class="hidden lg:flex w-9 h-9 items-center justify-center rounded-xl bg-slate-100 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] hover:border-[#2EC4B6]/50 transition-all" title="Toggle Theme" aria-label="Toggle dark mode">
                         <i id="nav-theme-icon" class="${document.documentElement.classList.contains('dark') ? 'fas fa-sun text-sm text-[#2EC4B6]' : 'fas fa-moon text-sm text-slate-500'}"></i>
                     </button>
                     <!-- CTAs -->
-                    <a href="login.html" class="hidden xl:inline-flex btn-secondary text-xs px-4 h-9 items-center justify-center">Login</a>
-                    <a href="quote.html" class="hidden xl:inline-flex btn-primary text-xs px-4 h-9 items-center justify-center ${page === 'quote.html' ? 'ring-2 ring-[#2EC4B6] ring-offset-2 dark:ring-offset-[#0D1117]' : ''}">Get Free Quote</a>
+                    <a href="login.html" class="hidden lg:inline-flex btn-secondary text-xs px-4 h-9 items-center justify-center">Login</a>
+                    <a href="quote.html" class="hidden lg:inline-flex btn-primary text-xs px-4 h-9 items-center justify-center ${page === 'quote.html' ? 'ring-2 ring-[#2EC4B6] ring-offset-2 dark:ring-offset-[#0D1117]' : ''}">Get Free Quote</a>
                     <!-- Mobile Hamburger -->
-                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="xl:hidden w-9 h-9 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] transition-colors" aria-label="Open menu">
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="lg:hidden w-9 h-9 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] transition-colors" aria-label="Open menu">
                         <i class="fas fa-bars text-slate-600 dark:text-slate-300"></i>
                     </button>
                 </div>
@@ -102,14 +113,14 @@ function injectNav() {
         </div>
 
         <!-- Mobile Menu Backdrop -->
-        <div id="mobile-backdrop" onclick="toggleMobileMenu()" class="hidden xl:hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-40 top-16"></div>
+        <div id="mobile-backdrop" onclick="toggleMobileMenu()" class="hidden lg:hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-40 top-16"></div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden xl:hidden absolute top-full left-0 right-0 w-full bg-white dark:bg-[#0D1117] border-b border-slate-200 dark:border-[#30363D] shadow-2xl z-50">
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 right-0 w-full bg-white dark:bg-[#0D1117] border-b border-slate-200 dark:border-[#30363D] shadow-2xl z-50">
             <div class="px-4 py-5 flex flex-col gap-1 max-w-7xl mx-auto">
                 ${links.map(l => {
-                    const isActive = page === l.href;
-                    return `<a href="${l.href}" class="block px-4 py-3 rounded-xl text-sm font-semibold ${isActive ? 'bg-[#1A3A5C] text-white' : 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-[#161B22]'} transition-colors">${l.label}</a>`;
+                    const isActive = page === l.href.toLowerCase();
+                    return `<a href="${l.href}" class="block px-4 py-3 rounded-xl text-sm font-semibold ${isActive ? 'bg-[#1A3A5C] text-white border-l-4 border-[#2EC4B6]' : 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-[#161B22]'} transition-colors">${l.label}</a>`;
                 }).join('')}
                 <div class="mt-3 pt-3 border-t border-slate-100 dark:border-[#30363D] flex flex-col gap-2">
                     <a href="quote.html" class="btn-primary text-xs h-11 flex items-center justify-center text-center w-full">Get Free Quote</a>
