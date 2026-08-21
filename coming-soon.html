@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" id="root-html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Coming Soon — New features and services are on the way from SecureVista Security. Subscribe to get notified.">
+    <title>Coming Soon | SecureVista Security</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#1A3A5C', secondary: '#2EC4B6' } } } }</script>
+</head>
+<body class="min-h-screen bg-gradient-mesh flex flex-col items-center justify-center px-4 relative overflow-hidden">
+
+    <!-- Animated background -->
+    <div class="absolute w-72 h-72 rounded-full bg-[#2EC4B6]/5 top-[5%] right-[10%] animate-float blur-3xl"></div>
+    <div class="absolute w-56 h-56 rounded-full bg-[#1A3A5C]/10 bottom-[10%] left-[5%] animate-float animation-delay-800 blur-2xl"></div>
+    <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle, #2EC4B6 1px, transparent 1px); background-size: 30px 30px;"></div>
+
+    <!-- Radar animation -->
+    <div class="relative mb-10 animate-fade-in-up">
+        <div class="w-36 h-36 mx-auto relative">
+            <!-- Outer ring -->
+            <div class="absolute inset-0 rounded-full border-2 border-[#2EC4B6]/15"></div>
+            <div class="absolute inset-3 rounded-full border border-[#2EC4B6]/10"></div>
+            <div class="absolute inset-6 rounded-full border border-[#2EC4B6]/8"></div>
+            <!-- Center dot -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#2EC4B6] animate-pulse-glow"></div>
+            <!-- Sweep line -->
+            <div class="absolute top-1/2 left-1/2 w-1/2 h-0.5 bg-gradient-to-r from-[#2EC4B6]/60 to-transparent origin-left animate-spin-slow" style="animation-duration: 4s;"></div>
+            <!-- Blip dots -->
+            <div class="absolute top-[22%] left-[65%] w-2 h-2 rounded-full bg-[#2EC4B6]/40 animate-float animation-delay-300"></div>
+            <div class="absolute top-[60%] left-[25%] w-1.5 h-1.5 rounded-full bg-[#2EC4B6]/30 animate-float animation-delay-600"></div>
+        </div>
+    </div>
+
+    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#2EC4B6]/10 border border-[#2EC4B6]/20 text-[#2EC4B6] text-xs font-bold tracking-widest uppercase mb-6 animate-fade-in-up animation-delay-200">
+        <i class="fas fa-satellite-dish"></i> Scanning Ahead
+    </span>
+
+    <h1 class="text-3xl md:text-5xl font-black text-white mb-4 text-center animate-fade-in-up animation-delay-300" style="font-family:'Poppins',sans-serif;">
+        Something <span class="gradient-text-light">Big</span> Is Coming
+    </h1>
+    <p class="text-white/50 text-base max-w-lg text-center mb-10 animate-fade-in-up animation-delay-400 leading-relaxed">
+        We're building something exciting — new features, expanded services, and smarter security solutions. Be the first to know when we launch.
+    </p>
+
+    <!-- Countdown Placeholders -->
+    <div class="flex items-center gap-4 sm:gap-6 mb-10 animate-fade-in-up animation-delay-500">
+        <div class="text-center">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-2">
+                <span class="text-2xl sm:text-3xl font-black text-white" style="font-family:'Poppins',sans-serif;">14</span>
+            </div>
+            <span class="text-white/30 text-[10px] font-bold uppercase tracking-wider">Days</span>
+        </div>
+        <div class="text-[#2EC4B6]/30 text-2xl font-black">:</div>
+        <div class="text-center">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-2">
+                <span class="text-2xl sm:text-3xl font-black text-white" style="font-family:'Poppins',sans-serif;">08</span>
+            </div>
+            <span class="text-white/30 text-[10px] font-bold uppercase tracking-wider">Hours</span>
+        </div>
+        <div class="text-[#2EC4B6]/30 text-2xl font-black">:</div>
+        <div class="text-center">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-2">
+                <span class="text-2xl sm:text-3xl font-black text-white" style="font-family:'Poppins',sans-serif;">42</span>
+            </div>
+            <span class="text-white/30 text-[10px] font-bold uppercase tracking-wider">Minutes</span>
+        </div>
+    </div>
+
+    <!-- Email Notify -->
+    <form onsubmit="submitNotify(event)" class="w-full max-w-md animate-fade-in-up animation-delay-600">
+        <div class="flex flex-col sm:flex-row items-stretch gap-3">
+            <input id="notify-email" type="email" placeholder="your@email.com" class="flex-1 bg-white/5 border border-white/15 rounded-xl px-5 py-3.5 text-sm text-white placeholder-white/30 focus:outline-none focus:border-[#2EC4B6] transition-colors" required>
+            <button type="submit" class="btn-primary px-6 py-3.5 text-sm whitespace-nowrap">
+                Notify Me <i class="fas fa-bell text-xs"></i>
+            </button>
+        </div>
+        <p id="notify-success" class="hidden text-[#2EC4B6] text-xs text-center font-bold mt-3">
+            <i class="fas fa-check-circle mr-1"></i> You're on the list! We'll notify you when we launch.
+        </p>
+    </form>
+
+    <!-- Back link -->
+    <a href="index.html" class="mt-10 text-white/30 hover:text-white/60 text-sm transition-colors animate-fade-in-up animation-delay-800">
+        <i class="fas fa-arrow-left text-xs mr-1"></i> Back to Home
+    </a>
+
+    <p class="absolute bottom-6 text-white/20 text-xs">&copy; 2025 SecureVista Security</p>
+
+<script src="components.js"></script>
+</body>
+</html>

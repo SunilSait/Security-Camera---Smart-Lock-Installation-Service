@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" id="root-html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page not found — SecureVista Security">
+    <title>404 — Page Not Found | SecureVista Security</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#1A3A5C', secondary: '#2EC4B6' } } } }</script>
+</head>
+<body class="min-h-screen bg-gradient-mesh flex flex-col items-center justify-center px-4 relative overflow-hidden">
+
+    <!-- Animated background elements -->
+    <div class="absolute w-64 h-64 rounded-full bg-[#2EC4B6]/5 top-[10%] left-[5%] animate-float blur-3xl"></div>
+    <div class="absolute w-48 h-48 rounded-full bg-[#1A3A5C]/10 bottom-[15%] right-[10%] animate-float animation-delay-600 blur-2xl"></div>
+    <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle, #2EC4B6 1px, transparent 1px); background-size: 30px 30px;"></div>
+
+    <!-- Broken shield icon -->
+    <div class="relative mb-8 animate-fade-in-up">
+        <div class="w-32 h-32 mx-auto relative">
+            <svg viewBox="0 0 100 100" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 8 L85 25 L85 55 C85 72 70 85 50 95 C30 85 15 72 15 55 L15 25 Z" stroke="#2EC4B6" stroke-width="2" fill="rgba(46,196,182,0.08)" stroke-dasharray="8 4"/>
+                <text x="50" y="60" text-anchor="middle" font-size="32" font-weight="900" fill="#2EC4B6" font-family="Poppins, sans-serif">404</text>
+            </svg>
+            <!-- Animated ping ring -->
+            <div class="absolute inset-0 rounded-full border-2 border-[#2EC4B6]/20 animate-ping-slow"></div>
+        </div>
+    </div>
+
+    <h1 class="text-3xl md:text-4xl font-black text-white mb-4 text-center animate-fade-in-up animation-delay-200" style="font-family:'Poppins',sans-serif;">
+        Security Breach: <span class="gradient-text-light">Page Not Found</span>
+    </h1>
+    <p class="text-white/50 text-base max-w-md text-center mb-10 animate-fade-in-up animation-delay-400 leading-relaxed">
+        The page you're looking for doesn't exist or has been moved. Our surveillance system couldn't locate this area.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center gap-4 animate-fade-in-up animation-delay-600">
+        <a href="index.html" class="btn-primary px-8 py-4 text-sm">
+            <i class="fas fa-house text-xs"></i> Back to Home
+        </a>
+        <a href="contact.html" class="btn-secondary btn-secondary-white px-8 py-4 text-sm">
+            <i class="fas fa-headset text-xs"></i> Contact Support
+        </a>
+    </div>
+
+    <!-- Quick links -->
+    <div class="mt-12 animate-fade-in-up animation-delay-800">
+        <p class="text-white/30 text-xs uppercase tracking-widest font-bold mb-4 text-center">Quick Links</p>
+        <div class="flex flex-wrap items-center justify-center gap-3">
+            <a href="services.html" class="text-white/40 hover:text-[#2EC4B6] text-sm transition-colors">Services</a>
+            <span class="text-white/20">•</span>
+            <a href="pricing.html" class="text-white/40 hover:text-[#2EC4B6] text-sm transition-colors">Pricing</a>
+            <span class="text-white/20">•</span>
+            <a href="about.html" class="text-white/40 hover:text-[#2EC4B6] text-sm transition-colors">About</a>
+            <span class="text-white/20">•</span>
+            <a href="contact.html" class="text-white/40 hover:text-[#2EC4B6] text-sm transition-colors">Contact</a>
+        </div>
+    </div>
+
+    <!-- Footer line -->
+    <p class="absolute bottom-6 text-white/20 text-xs">&copy; 2025 SecureVista Security</p>
+
+<script src="components.js"></script>
+</body>
+</html>
