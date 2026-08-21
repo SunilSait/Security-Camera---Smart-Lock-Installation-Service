@@ -308,6 +308,48 @@ select.form-input {
     padding-left: 2.5rem;
 }
 
+/* RTL Input & Placeholder Alignment */
+[dir="rtl"] .form-input,
+[dir="rtl"] input[type="text"],
+[dir="rtl"] input[type="email"],
+[dir="rtl"] input[type="password"],
+[dir="rtl"] input[type="number"],
+[dir="rtl"] textarea {
+    text-align: right !important;
+    direction: rtl;
+}
+
+[dir="rtl"] input[type="tel"] {
+    text-align: right !important;
+    direction: ltr !important;
+    unicode-bidi: isolate !important;
+}
+
+[dir="rtl"] input::placeholder,
+[dir="rtl"] textarea::placeholder {
+    text-align: right !important;
+    direction: rtl;
+}
+
+[dir="rtl"] input[type="tel"]::placeholder {
+    text-align: right !important;
+    direction: ltr !important;
+    unicode-bidi: isolate !important;
+}
+
+/* RTL Input Icon Padding Clearance */
+[dir="rtl"] .ps-11,
+[dir="rtl"] input.ps-11,
+[dir="rtl"] input[type="tel"].ps-11 {
+    padding-right: 2.75rem !important;
+    padding-left: 1rem !important;
+}
+
+[dir="rtl"] .pe-11,
+[dir="rtl"] input.pe-11 {
+    padding-left: 2.75rem !important;
+}
+
 /* --- Card Hover Effects --- */
 .card-hover {
     transition: var(--transition-premium);
@@ -406,12 +448,12 @@ select.form-input {
     color: rgba(46,196,182,0.25);
     font-size: 14px;
 }
-.floating-icon-1 { top: 15%; left: 5%; animation: float-drift 7s ease-in-out infinite; }
-.floating-icon-2 { top: 30%; right: 8%; animation: float-drift 9s ease-in-out infinite 1s; }
-.floating-icon-3 { top: 65%; left: 12%; animation: float-drift 8s ease-in-out infinite 0.5s; }
-.floating-icon-4 { top: 80%; right: 15%; animation: float-drift 6s ease-in-out infinite 2s; }
-.floating-icon-5 { top: 20%; right: 25%; animation: float-drift 10s ease-in-out infinite 1.5s; }
-.floating-icon-6 { top: 75%; left: 30%; animation: float-drift 7.5s ease-in-out infinite 0.8s; }
+.floating-icon-1 { top: 9%; left: 1.5%; animation: float-drift 7s ease-in-out infinite; }
+.floating-icon-2 { top: 15%; right: 4%; animation: float-drift 9s ease-in-out infinite 1s; }
+.floating-icon-3 { top: 62%; left: 1.5%; animation: float-drift 8s ease-in-out infinite 0.5s; }
+.floating-icon-4 { top: 86%; right: 6%; animation: float-drift 6s ease-in-out infinite 2s; }
+.floating-icon-5 { top: 12%; left: 44%; animation: float-drift 10s ease-in-out infinite 1.5s; }
+.floating-icon-6 { top: 90%; left: 46%; animation: float-drift 7.5s ease-in-out infinite 0.8s; }
 
 @keyframes float-drift {
     0%, 100% { transform: translate(0, 0) rotate(0deg); }
@@ -555,11 +597,11 @@ select.form-input {
     line-height: 1.2;
 }
 .hero-stat-label {
-    font-size: 0.6rem;
+    font-size: 0.625rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: rgba(255,255,255,0.35);
+    color: rgba(255,255,255,0.7);
 }
 .hero-stat-divider {
     width: 1px;
@@ -890,6 +932,23 @@ select.form-input {
     background: var(--secondary);
     width: 24px;
     border-radius: 4px;
+}
+
+/* --- Hero Carousel Slides --- */
+.hero-slide-item {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), visibility 1s;
+    z-index: 1;
+    pointer-events: none;
+}
+.hero-slide-item.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+    pointer-events: auto;
 }
 
 /* --- Hero Slider Dots --- */

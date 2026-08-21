@@ -92,7 +92,7 @@ function injectNav() {
                     </button>
                     <!-- CTAs -->
                     <a href="login.html" class="hidden xl:inline-flex btn-secondary text-xs px-4 h-9 items-center justify-center">Login</a>
-                    <a href="contact.html" class="hidden xl:inline-flex btn-primary text-xs px-4 h-9 items-center justify-center ${page === 'contact.html' ? 'ring-2 ring-[#2EC4B6] ring-offset-2 dark:ring-offset-[#0D1117]' : ''}">Get Free Quote</a>
+                    <a href="quote.html" class="hidden xl:inline-flex btn-primary text-xs px-4 h-9 items-center justify-center ${page === 'quote.html' ? 'ring-2 ring-[#2EC4B6] ring-offset-2 dark:ring-offset-[#0D1117]' : ''}">Get Free Quote</a>
                     <!-- Mobile Hamburger -->
                     <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="xl:hidden w-9 h-9 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] transition-colors" aria-label="Open menu">
                         <i class="fas fa-bars text-slate-600 dark:text-slate-300"></i>
@@ -112,7 +112,7 @@ function injectNav() {
                     return `<a href="${l.href}" class="block px-4 py-3 rounded-xl text-sm font-semibold ${isActive ? 'bg-[#1A3A5C] text-white' : 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-[#161B22]'} transition-colors">${l.label}</a>`;
                 }).join('')}
                 <div class="mt-3 pt-3 border-t border-slate-100 dark:border-[#30363D] flex flex-col gap-2">
-                    <a href="contact.html" class="btn-primary text-xs h-11 flex items-center justify-center text-center w-full">Get Free Quote</a>
+                    <a href="quote.html" class="btn-primary text-xs h-11 flex items-center justify-center text-center w-full">Get Free Quote</a>
                     <a href="login.html" class="btn-secondary text-xs h-11 flex items-center justify-center text-center w-full">Login</a>
                 </div>
                 <div class="flex items-center gap-2 mt-3 justify-center">
@@ -405,12 +405,11 @@ function initHeroAutoSlider() {
     const dots = document.querySelectorAll('.hero-slider-dot');
     const prevBtn = document.getElementById('hero-prev-btn');
     const nextBtn = document.getElementById('hero-next-btn');
-    const heroSection = document.getElementById('home2-hero-section');
     if (!slides.length) return;
 
     let currentIndex = 0;
     let autoTimer = null;
-    const intervalTime = 5000;
+    const intervalTime = 3800;
 
     function showSlide(index) {
         if (index < 0) { currentIndex = slides.length - 1; }
@@ -419,11 +418,9 @@ function initHeroAutoSlider() {
 
         slides.forEach((slide, idx) => {
             if (idx === currentIndex) {
-                slide.classList.remove('hidden');
-                slide.classList.add('animate-fade-in');
+                slide.classList.add('active');
             } else {
-                slide.classList.add('hidden');
-                slide.classList.remove('animate-fade-in');
+                slide.classList.remove('active');
             }
         });
 
@@ -444,15 +441,26 @@ function initHeroAutoSlider() {
     }
 
     dots.forEach((dot, idx) => {
-        dot.addEventListener('click', () => { showSlide(idx); startAutoPlay(); });
+        dot.addEventListener('click', (e) => {
+            e.preventDefault();
+            showSlide(idx);
+            startAutoPlay();
+        });
     });
 
-    if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); startAutoPlay(); });
-    if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); startAutoPlay(); });
-
-    if (heroSection) {
-        heroSection.addEventListener('mouseenter', stopAutoPlay);
-        heroSection.addEventListener('mouseleave', startAutoPlay);
+    if (nextBtn) {
+        nextBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            nextSlide();
+            startAutoPlay();
+        });
+    }
+    if (prevBtn) {
+        prevBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            prevSlide();
+            startAutoPlay();
+        });
     }
 
     showSlide(0);
@@ -462,61 +470,175 @@ function initHeroAutoSlider() {
 /* ─── PACKAGE FINDER ──────────────────────────────────────────── */
 function initPackageFinder() {
     const container = document.getElementById('package-finder');
-    if (!container) return;
+    const grid = document.getElementById('package-grid');
+    if (!container || !grid) return;
 
     let selectedType = 'residential';
-    let selectedTier = 'standard';
-
     const typeBtns = container.querySelectorAll('[data-pkg-type]');
-    const tierBtns = container.querySelectorAll('[data-pkg-tier]');
-
-    const pkgNameEl = document.getElementById('pkg-name');
-    const pkgPriceEl = document.getElementById('pkg-price');
-    const pkgDescEl = document.getElementById('pkg-desc');
-    const pkgFeaturesEl = document.getElementById('pkg-features');
 
     const packageData = {
-        'residential': {
-            'basic': { name: 'Home Starter', price: '₹14,999', desc: 'Essential security for small homes', features: ['2 HD Cameras', '1 Smart Lock', 'Basic Alarm Panel', 'Mobile App Access', 'Standard Installation'] },
-            'standard': { name: 'Home Shield', price: '₹29,999', desc: 'Complete home protection package', features: ['4 HD Cameras', '2 Smart Locks', 'Advanced Alarm System', 'Video Doorbell', '24/7 Cloud Recording', 'Priority Installation'] },
-            'premium': { name: 'Home Fortress', price: '₹54,999', desc: 'Premium whole-home security suite', features: ['8 4K Cameras', '4 Biometric Locks', 'Full Alarm System', '2 Video Doorbells', 'NVR + Cloud Backup', 'Motion Sensors', 'Lifetime Support'] }
-        },
-        'commercial': {
-            'basic': { name: 'Office Guard', price: '₹49,999', desc: 'Basic business surveillance', features: ['4 HD Cameras', '2 Access Control Locks', 'Fire Alarm Integration', 'Visitor Management', 'Standard Setup'] },
-            'standard': { name: 'Business Shield', price: '₹99,999', desc: 'Comprehensive business security', features: ['8 4K Cameras', '4 Biometric Locks', 'Multi-zone Alarm', 'ANPR Integration', '90-day Cloud Storage', 'Priority Support'] },
-            'premium': { name: 'Enterprise Vault', price: '₹1,99,999', desc: 'Enterprise-grade security infrastructure', features: ['16+ 4K Cameras', 'Biometric + Card Access', 'AI Analytics', 'Perimeter Detection', 'Dedicated NVR Cluster', 'SLA-backed Support', 'Annual Maintenance'] }
-        }
+        'residential': [
+            {
+                tier: 'Basic',
+                name: 'Home Starter',
+                price: '₹14,999',
+                desc: 'Essential smart protection for small homes & flats',
+                icon: 'fa-shield-halved',
+                popular: false,
+                features: [
+                    '2 HD 1080p Cameras',
+                    '1 Smart Digital Lock',
+                    'Basic Alarm Hub',
+                    'Mobile App Live Access',
+                    'Standard Installation',
+                    '1-Year Product Warranty'
+                ]
+            },
+            {
+                tier: 'Standard',
+                name: 'Home Shield',
+                price: '₹29,999',
+                desc: 'Complete full-property security with smart alerts',
+                icon: 'fa-shield-halved',
+                popular: true,
+                badge: 'Most Popular',
+                features: [
+                    '4 HD 2K QHD Cameras',
+                    '2 Smart Touch Locks',
+                    'Advanced Alarm System',
+                    '1 Video Doorbell with Chime',
+                    '24/7 Cloud Recording',
+                    'Priority Installation & Setup',
+                    '2-Year Comprehensive Warranty'
+                ]
+            },
+            {
+                tier: 'Premium',
+                name: 'Home Fortress',
+                price: '₹54,999',
+                desc: 'Ultimate whole-home multi-layer protection suite',
+                icon: 'fa-building-shield',
+                popular: false,
+                badge: 'Maximum Security',
+                features: [
+                    '8 4K Ultra-HD Cameras',
+                    '4 Biometric Fingerprint Locks',
+                    'Full Multi-Sensor Alarm',
+                    '2 Video Doorbells',
+                    'NVR + Cloud Dual Storage',
+                    'AI Motion & Person Detection',
+                    'Lifetime Dedicated Support'
+                ]
+            }
+        ],
+        'commercial': [
+            {
+                tier: 'Basic',
+                name: 'Office Guard',
+                price: '₹49,999',
+                desc: 'Essential business surveillance & access control',
+                icon: 'fa-shield-halved',
+                popular: false,
+                features: [
+                    '4 HD Business Cameras',
+                    '2 Access Control Locks',
+                    'Fire & Smoke Integration',
+                    'Visitor Management App',
+                    'Standard Professional Setup',
+                    '1-Year Business Support'
+                ]
+            },
+            {
+                tier: 'Standard',
+                name: 'Business Shield',
+                price: '₹99,999',
+                desc: 'Comprehensive multi-zone commercial security',
+                icon: 'fa-shield-halved',
+                popular: true,
+                badge: 'Best Value',
+                features: [
+                    '8 4K Ultra-HD Cameras',
+                    '4 Biometric & RFID Locks',
+                    'Multi-zone Siren Alarm',
+                    'ANPR Vehicle Recognition',
+                    '90-Day Cloud Storage',
+                    'Priority SLA Support',
+                    'Quarterly Health Checks'
+                ]
+            },
+            {
+                tier: 'Premium',
+                name: 'Enterprise Vault',
+                price: '₹1,99,999',
+                desc: 'Enterprise-grade security & monitoring infrastructure',
+                icon: 'fa-building-shield',
+                popular: false,
+                badge: 'Enterprise Grade',
+                features: [
+                    '16+ 4K Ultra-HD Cameras',
+                    'Biometric + RFID Access Hub',
+                    'AI Facial & Object Analytics',
+                    'Perimeter Radar Detection',
+                    'Dedicated NVR Server Cluster',
+                    '24/7 SLA-backed NOC Support',
+                    'Annual Maintenance Contract'
+                ]
+            }
+        ]
     };
 
-    function updateResult() {
-        const data = packageData[selectedType]?.[selectedTier] || packageData['residential']['standard'];
-        if (pkgNameEl) pkgNameEl.textContent = data.name;
-        if (pkgPriceEl) pkgPriceEl.textContent = data.price;
-        if (pkgDescEl) pkgDescEl.textContent = data.desc;
-        if (pkgFeaturesEl) {
-            pkgFeaturesEl.innerHTML = data.features.map(f => `<li class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300"><i class="fas fa-check text-[#2EC4B6] text-xs flex-shrink-0"></i>${f}</li>`).join('');
-        }
+    function renderPackages() {
+        const packages = packageData[selectedType] || packageData['residential'];
+        grid.innerHTML = packages.map((pkg) => {
+            const isPop = pkg.popular;
+            return `
+            <div class="bg-white dark:bg-[#0D1117] rounded-3xl ${isPop ? 'pricing-popular ring-2 ring-[#2EC4B6]' : 'border border-slate-200 dark:border-[#30363D]'} p-8 text-center card-hover flex flex-col relative transition-all duration-300">
+                ${isPop ? `<div class="absolute -top-3.5 left-1/2 -translate-x-1/2"><span class="badge bg-[#2EC4B6] text-white px-4 py-1 text-xs font-black shadow-lg shadow-[#2EC4B6]/30 uppercase tracking-wider rounded-full">${pkg.badge || 'Most Popular'}</span></div>` : ''}
+                
+                <div class="w-14 h-14 rounded-2xl ${isPop ? 'bg-[#2EC4B6]/15 text-[#2EC4B6]' : 'bg-slate-100 dark:bg-[#161B22] text-slate-500 dark:text-slate-400'} flex items-center justify-center mx-auto mb-4 text-xl">
+                    <i class="fas ${pkg.icon}"></i>
+                </div>
+                
+                <span class="text-xs font-extrabold uppercase tracking-widest text-[#2EC4B6] mb-1">${pkg.tier}</span>
+                <h3 class="font-black text-2xl text-slate-900 dark:text-white mb-2" style="font-family:'Poppins',sans-serif;">${pkg.name}</h3>
+                <p class="text-slate-500 dark:text-slate-400 text-xs mb-6 min-h-[32px]">${pkg.desc}</p>
+                
+                <div class="mb-6 pb-6 border-b border-slate-100 dark:border-[#30363D]">
+                    <div class="text-4xl font-black ${isPop ? 'text-[#2EC4B6]' : 'text-slate-900 dark:text-white'}">${pkg.price}</div>
+                    <div class="text-slate-400 text-xs mt-1 font-medium">all-inclusive installation</div>
+                </div>
+                
+                <ul class="space-y-3 mb-8 flex-grow text-left">
+                    ${pkg.features.map(f => `
+                        <li class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                            <i class="fas fa-check text-[#2EC4B6] text-xs flex-shrink-0"></i>
+                            <span>${f}</span>
+                        </li>
+                    `).join('')}
+                </ul>
+                
+                <a href="contact.html" class="${isPop ? 'btn-primary' : 'btn-secondary'} w-full py-3.5 text-xs font-bold uppercase tracking-wider">
+                    Get ${pkg.tier} Plan <i class="fas fa-arrow-right text-[10px] ml-1"></i>
+                </a>
+            </div>
+            `;
+        }).join('');
     }
 
     typeBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            typeBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
+            typeBtns.forEach(b => {
+                b.classList.remove('active', 'bg-[#1A3A5C]', 'text-white', 'shadow-md');
+                b.classList.add('text-slate-600', 'dark:text-slate-300');
+            });
+            btn.classList.add('active', 'bg-[#1A3A5C]', 'text-white', 'shadow-md');
+            btn.classList.remove('text-slate-600', 'dark:text-slate-300');
             selectedType = btn.dataset.pkgType;
-            updateResult();
+            renderPackages();
         });
     });
 
-    tierBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            tierBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            selectedTier = btn.dataset.pkgTier;
-            updateResult();
-        });
-    });
-
-    updateResult();
+    renderPackages();
 }
 
 /* ─── INIT ────────────────────────────────────────────────────── */

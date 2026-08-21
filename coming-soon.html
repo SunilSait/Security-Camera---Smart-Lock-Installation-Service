@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Coming Soon — New features and services are on the way from SecureVista Security. Subscribe to get notified.">
+    <meta name="description" content="Coming Soon — Next-Generation Smart Security Solutions from SecureVista. Subscribe for exclusive early access and launch discounts.">
     <title>Coming Soon | SecureVista Security</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -11,85 +11,289 @@
     <link rel="stylesheet" href="style.css">
     <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#1A3A5C', secondary: '#2EC4B6' } } } }</script>
 </head>
-<body class="min-h-screen bg-gradient-mesh flex flex-col items-center justify-center px-4 relative overflow-hidden">
+<body class="min-h-screen bg-[#F4F7FA] dark:bg-[#0D1117] text-slate-900 dark:text-white transition-colors duration-300 flex flex-col justify-between relative overflow-x-hidden">
 
-    <!-- Animated background -->
-    <div class="absolute w-72 h-72 rounded-full bg-[#2EC4B6]/5 top-[5%] right-[10%] animate-float blur-3xl"></div>
-    <div class="absolute w-56 h-56 rounded-full bg-[#1A3A5C]/10 bottom-[10%] left-[5%] animate-float animation-delay-800 blur-2xl"></div>
-    <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle, #2EC4B6 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <!-- Ambient background glow elements -->
+    <div class="fixed top-[-10%] right-[-5%] w-96 h-96 rounded-full bg-[#2EC4B6]/10 dark:bg-[#2EC4B6]/15 blur-3xl pointer-events-none"></div>
+    <div class="fixed bottom-[-10%] left-[-5%] w-[30rem] h-[30rem] rounded-full bg-[#1A3A5C]/10 dark:bg-[#1A3A5C]/35 blur-3xl pointer-events-none"></div>
+    <div class="fixed inset-0 opacity-[0.03] dark:opacity-5 pointer-events-none" style="background-image: radial-gradient(circle, #2EC4B6 1px, transparent 1px); background-size: 28px 28px;"></div>
 
-    <!-- Radar animation -->
-    <div class="relative mb-10 animate-fade-in-up">
-        <div class="w-36 h-36 mx-auto relative">
-            <!-- Outer ring -->
-            <div class="absolute inset-0 rounded-full border-2 border-[#2EC4B6]/15"></div>
-            <div class="absolute inset-3 rounded-full border border-[#2EC4B6]/10"></div>
-            <div class="absolute inset-6 rounded-full border border-[#2EC4B6]/8"></div>
-            <!-- Center dot -->
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#2EC4B6] animate-pulse-glow"></div>
-            <!-- Sweep line -->
-            <div class="absolute top-1/2 left-1/2 w-1/2 h-0.5 bg-gradient-to-r from-[#2EC4B6]/60 to-transparent origin-left animate-spin-slow" style="animation-duration: 4s;"></div>
-            <!-- Blip dots -->
-            <div class="absolute top-[22%] left-[65%] w-2 h-2 rounded-full bg-[#2EC4B6]/40 animate-float animation-delay-300"></div>
-            <div class="absolute top-[60%] left-[25%] w-1.5 h-1.5 rounded-full bg-[#2EC4B6]/30 animate-float animation-delay-600"></div>
-        </div>
-    </div>
-
-    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#2EC4B6]/10 border border-[#2EC4B6]/20 text-[#2EC4B6] text-xs font-bold tracking-widest uppercase mb-6 animate-fade-in-up animation-delay-200">
-        <i class="fas fa-satellite-dish"></i> Scanning Ahead
-    </span>
-
-    <h1 class="text-3xl md:text-5xl font-black text-white mb-4 text-center animate-fade-in-up animation-delay-300" style="font-family:'Poppins',sans-serif;">
-        Something <span class="gradient-text-light">Big</span> Is Coming
-    </h1>
-    <p class="text-white/50 text-base max-w-lg text-center mb-10 animate-fade-in-up animation-delay-400 leading-relaxed">
-        We're building something exciting — new features, expanded services, and smarter security solutions. Be the first to know when we launch.
-    </p>
-
-    <!-- Countdown Placeholders -->
-    <div class="flex items-center gap-4 sm:gap-6 mb-10 animate-fade-in-up animation-delay-500">
-        <div class="text-center">
-            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-2">
-                <span class="text-2xl sm:text-3xl font-black text-white" style="font-family:'Poppins',sans-serif;">14</span>
+    <!-- ═══════ TOP BAR (LOGO + RTL + THEME TOGGLE) ═══════ -->
+    <header class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex items-center justify-between relative z-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group" aria-label="SecureVista Home">
+            <div class="relative w-10 h-10 shrink-0">
+                <img src="favicon.svg" alt="SecureVista Logo" class="w-10 h-10 rounded-xl object-cover shadow-md transition-transform group-hover:scale-105" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div style="display:none;" class="w-10 h-10 bg-[#1A3A5C] rounded-xl items-center justify-center shadow-md">
+                    <svg width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50 10 L80 25 L80 55 C80 70 67 82 50 90 C33 82 20 70 20 55 L20 25 Z" stroke="white" stroke-width="4" fill="none"/><rect x="40" y="50" width="20" height="16" rx="2" fill="white" opacity="0.9"/></svg>
+                </div>
             </div>
-            <span class="text-white/30 text-[10px] font-bold uppercase tracking-wider">Days</span>
-        </div>
-        <div class="text-[#2EC4B6]/30 text-2xl font-black">:</div>
-        <div class="text-center">
-            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-2">
-                <span class="text-2xl sm:text-3xl font-black text-white" style="font-family:'Poppins',sans-serif;">08</span>
+            <div class="flex flex-col leading-none">
+                <span class="font-black text-slate-900 dark:text-white text-base tracking-tight" style="font-family:'Poppins',sans-serif;">SECURE</span>
+                <span class="font-bold text-[#2EC4B6] text-[10px] tracking-[0.2em] uppercase">Vista Security</span>
             </div>
-            <span class="text-white/30 text-[10px] font-bold uppercase tracking-wider">Hours</span>
-        </div>
-        <div class="text-[#2EC4B6]/30 text-2xl font-black">:</div>
-        <div class="text-center">
-            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-2">
-                <span class="text-2xl sm:text-3xl font-black text-white" style="font-family:'Poppins',sans-serif;">42</span>
-            </div>
-            <span class="text-white/30 text-[10px] font-bold uppercase tracking-wider">Minutes</span>
-        </div>
-    </div>
+        </a>
 
-    <!-- Email Notify -->
-    <form onsubmit="submitNotify(event)" class="w-full max-w-md animate-fade-in-up animation-delay-600">
-        <div class="flex flex-col sm:flex-row items-stretch gap-3">
-            <input id="notify-email" type="email" placeholder="your@email.com" class="flex-1 bg-white/5 border border-white/15 rounded-xl px-5 py-3.5 text-sm text-white placeholder-white/30 focus:outline-none focus:border-[#2EC4B6] transition-colors" required>
-            <button type="submit" class="btn-primary px-6 py-3.5 text-sm whitespace-nowrap">
-                Notify Me <i class="fas fa-bell text-xs"></i>
+        <!-- Controls: RTL + Dark Mode -->
+        <div class="flex items-center gap-2.5">
+            <button id="page-dir-btn" onclick="toggleDir()" class="h-9 px-3.5 flex items-center justify-center rounded-xl bg-white dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] text-slate-700 dark:text-slate-300 hover:border-[#2EC4B6] transition-all text-xs font-black shadow-sm" title="Toggle Direction">
+                <span id="page-dir-label">LTR</span>
+            </button>
+            <button id="page-theme-btn" onclick="toggleTheme()" class="w-9 h-9 flex items-center justify-center rounded-xl bg-white dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] text-slate-700 dark:text-slate-300 hover:border-[#2EC4B6] transition-all shadow-sm" title="Toggle Theme" aria-label="Toggle dark mode">
+                <i id="page-theme-icon" class="fas fa-moon text-sm"></i>
             </button>
         </div>
-        <p id="notify-success" class="hidden text-[#2EC4B6] text-xs text-center font-bold mt-3">
-            <i class="fas fa-check-circle mr-1"></i> You're on the list! We'll notify you when we launch.
+    </header>
+
+    <!-- ═══════ MAIN COMING SOON CONTENT ═══════ -->
+    <main class="flex-grow flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-10 relative z-10 text-center max-w-4xl mx-auto w-full">
+        
+        <!-- Status Pill -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#2EC4B6]/10 dark:bg-[#2EC4B6]/15 border border-[#2EC4B6]/30 text-[#2EC4B6] text-xs font-black uppercase tracking-widest mb-6 animate-fade-in-up">
+            <span class="w-2 h-2 rounded-full bg-[#2EC4B6] animate-pulse"></span>
+            <i class="fas fa-microchip"></i> Next-Gen Security Suite 2.0 • Launching Soon
+        </div>
+
+        <!-- Central Security Holographic Radar Graphic -->
+        <div class="relative w-48 h-48 sm:w-56 sm:h-56 mx-auto mb-6 flex items-center justify-center reveal">
+            <!-- Rotating Dashed Ring -->
+            <div class="absolute inset-0 rounded-full border border-dashed border-[#2EC4B6]/30 dark:border-[#2EC4B6]/20 animate-spin-slow"></div>
+            <!-- Pulsing Sonar Ring -->
+            <div class="absolute inset-4 rounded-full border border-[#2EC4B6]/20 dark:border-[#2EC4B6]/15 animate-ping-slow"></div>
+            
+            <!-- Radar Sweep Beam -->
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div class="w-full h-px bg-gradient-to-r from-transparent via-[#2EC4B6]/20 to-transparent"></div>
+                <div class="h-full w-px bg-gradient-to-b from-transparent via-[#2EC4B6]/20 to-transparent absolute"></div>
+            </div>
+
+            <!-- Central Glass Icon -->
+            <div class="relative z-10 w-28 h-28 sm:w-32 sm:h-32 rounded-3xl bg-white/80 dark:bg-[#161B22]/90 backdrop-blur-xl border-2 border-[#2EC4B6]/50 dark:border-[#2EC4B6]/40 shadow-2xl flex flex-col items-center justify-center p-3 group">
+                <div class="w-12 h-12 rounded-2xl bg-[#2EC4B6]/15 text-[#2EC4B6] flex items-center justify-center text-2xl mb-1 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-shield-cat"></i>
+                </div>
+                <span class="text-[10px] font-black text-slate-900 dark:text-white uppercase tracking-wider">AI Guard v2</span>
+            </div>
+
+            <!-- Orbiting Feature Icons -->
+            <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-7 h-7 rounded-lg bg-white dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] shadow-md flex items-center justify-center text-[#2EC4B6] text-xs animate-float">
+                <i class="fas fa-eye"></i>
+            </div>
+            <div class="absolute -bottom-1 right-6 w-7 h-7 rounded-lg bg-white dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] shadow-md flex items-center justify-center text-[#2EC4B6] text-xs animate-float animation-delay-400">
+                <i class="fas fa-fingerprint"></i>
+            </div>
+            <div class="absolute top-1/3 -left-2 w-7 h-7 rounded-lg bg-white dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] shadow-md flex items-center justify-center text-[#2EC4B6] text-xs animate-float animation-delay-600">
+                <i class="fas fa-wifi"></i>
+            </div>
+        </div>
+
+        <!-- Headline & Subtitle -->
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-4 animate-fade-in-up animation-delay-200" style="font-family:'Poppins',sans-serif; line-height: 1.35;">
+            Something <span class="gradient-text-light text-[#2EC4B6]">Revolutionary</span> Is Coming
+        </h1>
+        <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base max-w-lg mx-auto leading-relaxed mb-8 animate-fade-in-up animation-delay-400">
+            We are engineering the future of AI-powered smart surveillance, ultra-fast biometric locks, and integrated building security.
         </p>
-    </form>
 
-    <!-- Back link -->
-    <a href="index.html" class="mt-10 text-white/30 hover:text-white/60 text-sm transition-colors animate-fade-in-up animation-delay-800">
-        <i class="fas fa-arrow-left text-xs mr-1"></i> Back to Home
-    </a>
+        <!-- Live Countdown Timer -->
+        <div class="flex items-center justify-center gap-3 sm:gap-5 mb-8 animate-fade-in-up animation-delay-500">
+            <!-- Days -->
+            <div class="flex flex-col items-center">
+                <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] shadow-lg flex items-center justify-center">
+                    <span id="countdown-days" class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white" style="font-family:'Poppins',sans-serif;">18</span>
+                </div>
+                <span class="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 mt-2">Days</span>
+            </div>
+            <span class="text-xl font-black text-[#2EC4B6] -mt-5">:</span>
+            <!-- Hours -->
+            <div class="flex flex-col items-center">
+                <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] shadow-lg flex items-center justify-center">
+                    <span id="countdown-hours" class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white" style="font-family:'Poppins',sans-serif;">09</span>
+                </div>
+                <span class="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 mt-2">Hours</span>
+            </div>
+            <span class="text-xl font-black text-[#2EC4B6] -mt-5">:</span>
+            <!-- Minutes -->
+            <div class="flex flex-col items-center">
+                <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] shadow-lg flex items-center justify-center">
+                    <span id="countdown-minutes" class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white" style="font-family:'Poppins',sans-serif;">34</span>
+                </div>
+                <span class="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 mt-2">Minutes</span>
+            </div>
+            <span class="text-xl font-black text-[#2EC4B6] -mt-5">:</span>
+            <!-- Seconds -->
+            <div class="flex flex-col items-center">
+                <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] shadow-lg flex items-center justify-center">
+                    <span id="countdown-seconds" class="text-2xl sm:text-3xl font-black text-[#2EC4B6]" style="font-family:'Poppins',sans-serif;">50</span>
+                </div>
+                <span class="text-[10px] font-black uppercase tracking-widest text-[#2EC4B6] mt-2">Seconds</span>
+            </div>
+        </div>
 
-    <p class="absolute bottom-6 text-white/20 text-xs">&copy; 2025 SecureVista Security</p>
+        <!-- Notify Form -->
+        <div class="w-full max-w-md mx-auto mb-10 animate-fade-in-up animation-delay-600">
+            <form onsubmit="handleNotifySubmit(event)" id="notify-form" class="flex flex-col sm:flex-row gap-2.5">
+                <div class="relative flex-1">
+                    <input id="notify-email" type="email" placeholder="Enter your email for early access" class="form-input ps-10 text-xs w-full h-12" required>
+                    <i class="fas fa-envelope absolute start-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none"></i>
+                </div>
+                <button type="submit" id="notify-btn" class="btn-primary px-6 h-12 text-xs font-bold whitespace-nowrap shadow-lg shadow-[#2EC4B6]/20">
+                    <i class="fas fa-bell mr-1"></i> Notify Me
+                </button>
+            </form>
+            <div id="notify-success" class="hidden mt-3 p-3 rounded-xl bg-[#2EC4B6]/15 border border-[#2EC4B6]/30 text-[#2EC4B6] text-xs font-bold text-center">
+                <i class="fas fa-check-circle mr-1"></i> You're subscribed! You'll receive VIP launch access & exclusive discounts.
+            </div>
+        </div>
 
-<script src="components.js"></script>
+        <!-- Feature Sneak Peek Cards -->
+        <div class="w-full max-w-3xl animate-fade-in-up animation-delay-800">
+            <p class="text-xs font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-4">
+                What to Expect in Version 2.0
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div class="p-4 rounded-2xl bg-white dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] text-left card-hover shadow-sm">
+                    <div class="w-8 h-8 rounded-lg bg-[#2EC4B6]/15 text-[#2EC4B6] flex items-center justify-center text-xs mb-2">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h5 class="text-xs font-black text-slate-900 dark:text-white mb-1">AI Anomaly Recognition</h5>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Instant alerts for unattended objects, perimeter crossing, and vehicle plates.</p>
+                </div>
+                <div class="p-4 rounded-2xl bg-white dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] text-left card-hover shadow-sm">
+                    <div class="w-8 h-8 rounded-lg bg-[#1A3A5C]/15 text-[#1A3A5C] dark:text-[#2EC4B6] flex items-center justify-center text-xs mb-2">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h5 class="text-xs font-black text-slate-900 dark:text-white mb-1">Ultra-Fast 0.2s Locks</h5>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Next-gen 3D palm vein and facial recognition smart entry mechanisms.</p>
+                </div>
+                <div class="p-4 rounded-2xl bg-white dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] text-left card-hover shadow-sm">
+                    <div class="w-8 h-8 rounded-lg bg-[#2EC4B6]/15 text-[#2EC4B6] flex items-center justify-center text-xs mb-2">
+                        <i class="fas fa-mobile-screen"></i>
+                    </div>
+                    <h5 class="text-xs font-black text-slate-900 dark:text-white mb-1">Unified Command Hub</h5>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Single unified mobile app dashboard to control cameras, locks, alarms & lights.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Home Link -->
+        <div class="mt-8">
+            <a href="index.html" class="inline-flex items-center gap-2 text-xs font-bold text-slate-500 dark:text-slate-400 hover:text-[#2EC4B6] transition-colors">
+                <i class="fas fa-arrow-left text-[10px]"></i> Return to Current Website
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full text-center py-6 text-xs text-slate-400 dark:text-slate-500 relative z-10">
+        <p>&copy; 2025 SecureVista Security. All rights reserved. &middot; <a href="contact.html" class="text-[#2EC4B6] hover:underline">Contact Support</a></p>
+    </footer>
+
+    <script src="components.js"></script>
+    <script>
+        // Synchronize Theme & RTL with localStorage on load
+        document.addEventListener('DOMContentLoaded', () => {
+            const html = document.documentElement;
+            
+            // Theme Sync
+            const savedTheme = localStorage.getItem('securitycam_theme');
+            const themeIcon = document.getElementById('page-theme-icon');
+            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                html.classList.add('dark');
+                if (themeIcon) themeIcon.className = 'fas fa-sun text-sm text-[#2EC4B6]';
+            } else {
+                html.classList.remove('dark');
+                if (themeIcon) themeIcon.className = 'fas fa-moon text-sm text-slate-500';
+            }
+
+            // Direction Sync
+            const savedDir = localStorage.getItem('securitycam_dir') || 'ltr';
+            const dirLabel = document.getElementById('page-dir-label');
+            html.setAttribute('dir', savedDir);
+            if (dirLabel) dirLabel.textContent = savedDir === 'rtl' ? 'RTL' : 'LTR';
+
+            // Start Live Countdown
+            startCountdown();
+        });
+
+        // Theme Toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const isDark = html.classList.toggle('dark');
+            localStorage.setItem('securitycam_theme', isDark ? 'dark' : 'light');
+            const icon = document.getElementById('page-theme-icon');
+            if (icon) {
+                icon.className = isDark ? 'fas fa-sun text-sm text-[#2EC4B6]' : 'fas fa-moon text-sm text-slate-500';
+            }
+        }
+
+        // RTL Toggle
+        function toggleDir() {
+            const html = document.documentElement;
+            const currentDir = html.getAttribute('dir') || 'ltr';
+            const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
+            html.setAttribute('dir', newDir);
+            localStorage.setItem('securitycam_dir', newDir);
+            const label = document.getElementById('page-dir-label');
+            if (label) label.textContent = newDir === 'rtl' ? 'RTL' : 'LTR';
+        }
+
+        // Real Live Countdown Function
+        function startCountdown() {
+            // Target date: 18 days from now
+            const targetDate = new Date().getTime() + (18 * 24 * 60 * 60 * 1000) + (9 * 60 * 60 * 1000) + (34 * 60 * 1000);
+
+            function updateTimer() {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+
+                if (distance < 0) return;
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                const dEl = document.getElementById('countdown-days');
+                const hEl = document.getElementById('countdown-hours');
+                const mEl = document.getElementById('countdown-minutes');
+                const sEl = document.getElementById('countdown-seconds');
+
+                if (dEl) dEl.textContent = String(days).padStart(2, '0');
+                if (hEl) hEl.textContent = String(hours).padStart(2, '0');
+                if (mEl) mEl.textContent = String(minutes).padStart(2, '0');
+                if (sEl) sEl.textContent = String(seconds).padStart(2, '0');
+            }
+
+            updateTimer();
+            setInterval(updateTimer, 1000);
+        }
+
+        // Handle Early Access Notify Submit
+        function handleNotifySubmit(e) {
+            e.preventDefault();
+            const btn = document.getElementById('notify-btn');
+            const success = document.getElementById('notify-success');
+            const input = document.getElementById('notify-email');
+
+            if (btn) {
+                btn.innerHTML = '<i class="fas fa-circle-notch animate-spin-slow"></i>';
+                btn.disabled = true;
+            }
+
+            setTimeout(() => {
+                if (btn) {
+                    btn.innerHTML = '<i class="fas fa-check"></i> Subscribed';
+                }
+                if (success) {
+                    success.classList.remove('hidden');
+                }
+                if (input) {
+                    input.value = '';
+                }
+            }, 800);
+        }
+    </script>
 </body>
 </html>

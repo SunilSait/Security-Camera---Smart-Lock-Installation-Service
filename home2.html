@@ -16,53 +16,53 @@
 <div id="main-nav"></div>
 
 <!-- ═══════ HERO CAROUSEL ═══════ -->
-<section id="home2-hero-section" class="hero-lock relative min-h-[92vh] flex items-center justify-center overflow-hidden">
+<section id="home2-hero-section" class="hero-lock relative min-h-[92vh] flex items-center justify-center overflow-hidden pt-24 pb-16 lg:pt-28 lg:pb-20">
     <!-- Slide 1 -->
-    <div class="hero-slide-item absolute inset-0">
+    <div class="hero-slide-item active absolute inset-0">
         <img src="assets/images/hero-home2-slide1.jpg" alt="Smart Home Security" class="w-full h-full object-cover animate-slow-zoom" onerror="this.style.display='none'">
         <div class="absolute inset-0 bg-gradient-to-t from-[#0D1117]/95 via-[#1A3A5C]/60 to-transparent"></div>
     </div>
     <!-- Slide 2 -->
-    <div class="hero-slide-item hidden absolute inset-0">
+    <div class="hero-slide-item absolute inset-0">
         <img src="assets/images/hero-home2-slide2.jpg" alt="Business Security Systems" class="w-full h-full object-cover animate-slow-zoom" onerror="this.style.display='none'">
         <div class="absolute inset-0 bg-gradient-to-t from-[#0D1117]/95 via-[#1A3A5C]/60 to-transparent"></div>
     </div>
     <!-- Slide 3 -->
-    <div class="hero-slide-item hidden absolute inset-0">
+    <div class="hero-slide-item absolute inset-0">
         <img src="assets/images/hero-home2-slide3.jpg" alt="24/7 Monitoring Center" class="w-full h-full object-cover animate-slow-zoom" onerror="this.style.display='none'">
         <div class="absolute inset-0 bg-gradient-to-t from-[#0D1117]/95 via-[#1A3A5C]/60 to-transparent"></div>
     </div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div class="max-w-3xl">
-            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#2EC4B6]/15 border border-[#2EC4B6]/30 text-[#2EC4B6] text-xs font-bold tracking-widest uppercase mb-6 animate-fade-in-up">
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
+        <div class="max-w-3xl mx-auto flex flex-col items-center">
+            <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#2EC4B6]/15 border border-[#2EC4B6]/30 text-[#2EC4B6] text-xs font-bold tracking-widest uppercase mb-6 animate-fade-in-up">
                 <i class="fas fa-gem"></i> Premium Security
             </span>
-            <h1 class="hero-title text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05] mb-6 animate-fade-in-up animation-delay-200" style="font-family:'Poppins',sans-serif;">
-                Intelligent<br>Security <span class="gradient-text-light">Redefined</span>
+            <h1 class="hero-title text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.08] mb-6 animate-fade-in-up animation-delay-200" style="font-family:'Poppins',sans-serif;">
+                Intelligent Security <span class="gradient-text-light">Redefined</span>
             </h1>
-            <p class="text-white/60 text-lg md:text-xl max-w-xl mb-10 animate-fade-in-up animation-delay-400 leading-relaxed">
+            <p class="text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-10 animate-fade-in-up animation-delay-400 leading-relaxed">
                 AI-powered surveillance, biometric access control, and enterprise-grade alarm systems — all managed from your smartphone.
             </p>
-            <div class="flex flex-col sm:flex-row items-start gap-4 animate-fade-in-up animation-delay-600">
-                <a href="contact.html" class="btn-primary px-8 py-4 text-sm">
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 animate-fade-in-up animation-delay-600">
+                <a href="quote.html" class="btn-primary px-8 py-4 text-sm">
                     Get Started <i class="fas fa-arrow-right text-xs"></i>
                 </a>
                 <a href="services.html" class="btn-secondary btn-secondary-white px-8 py-4 text-sm">
                     Explore Solutions <i class="fas fa-shield-halved text-xs"></i>
                 </a>
             </div>
-        </div>
 
-        <!-- Carousel Controls -->
-        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex items-center gap-4 z-20">
-            <button id="hero-prev-btn" class="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all" aria-label="Previous slide"><i class="fas fa-chevron-left text-sm"></i></button>
-            <div class="flex items-center gap-2">
-                <button class="hero-slider-dot active" aria-label="Slide 1"></button>
-                <button class="hero-slider-dot" aria-label="Slide 2"></button>
-                <button class="hero-slider-dot" aria-label="Slide 3"></button>
+            <!-- Carousel Controls -->
+            <div class="flex items-center justify-center gap-4 animate-fade-in-up animation-delay-800">
+                <button id="hero-prev-btn" class="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all cursor-pointer" aria-label="Previous slide"><i class="fas fa-chevron-left text-sm"></i></button>
+                <div class="flex items-center gap-2">
+                    <button class="hero-slider-dot active" aria-label="Slide 1"></button>
+                    <button class="hero-slider-dot" aria-label="Slide 2"></button>
+                    <button class="hero-slider-dot" aria-label="Slide 3"></button>
+                </div>
+                <button id="hero-next-btn" class="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all cursor-pointer" aria-label="Next slide"><i class="fas fa-chevron-right text-sm"></i></button>
             </div>
-            <button id="hero-next-btn" class="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all" aria-label="Next slide"><i class="fas fa-chevron-right text-sm"></i></button>
         </div>
     </div>
 </section>
@@ -116,47 +116,30 @@
     </div>
 </section>
 
-<!-- ═══════ PACKAGE FINDER ═══════ -->
+<!-- ═══════ PACKAGE FINDER / SECURITY PACKAGES ═══════ -->
 <section class="py-20 lg:py-28 bg-[#F4F7FA] dark:bg-[#161B22]" id="package-finder">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12 reveal">
-            <span class="section-label mb-4 inline-flex"><i class="fas fa-sliders"></i> Package Finder</span>
+            <span class="section-label mb-4 inline-flex"><i class="fas fa-sliders"></i> Security Packages</span>
             <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white mt-4" style="font-family:'Poppins',sans-serif;">
                 Find Your Perfect <span class="text-[#2EC4B6]">Package</span>
             </h2>
-            <p class="text-slate-500 dark:text-slate-400 text-lg mt-4 max-w-2xl mx-auto">Select your property type and desired tier to see the ideal security package.</p>
+            <p class="text-slate-500 dark:text-slate-400 text-lg mt-4 max-w-2xl mx-auto">Compare all three security tiers side by side for your home or business.</p>
+
+            <!-- Property Type Switcher (Residential / Commercial) -->
+            <div class="inline-flex items-center p-1.5 rounded-2xl bg-white dark:bg-[#0D1117] border border-slate-200 dark:border-[#30363D] shadow-sm mt-8">
+                <button data-pkg-type="residential" class="active px-6 py-2.5 rounded-xl text-sm font-bold transition-all bg-[#1A3A5C] text-white shadow-md flex items-center gap-2 cursor-pointer">
+                    <i class="fas fa-house"></i> Residential
+                </button>
+                <button data-pkg-type="commercial" class="px-6 py-2.5 rounded-xl text-sm font-bold transition-all text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white flex items-center gap-2 cursor-pointer">
+                    <i class="fas fa-building"></i> Commercial
+                </button>
+            </div>
         </div>
 
-        <div class="max-w-3xl mx-auto reveal">
-            <!-- Type Selector -->
-            <div class="flex items-center justify-center gap-3 mb-6 flex-wrap">
-                <button data-pkg-type="residential" class="active px-5 py-2.5 rounded-xl text-sm font-bold transition-all bg-[#1A3A5C] text-white shadow-lg" onclick="this.classList.add('active','bg-[#1A3A5C]','text-white','shadow-lg');this.classList.remove('bg-white','dark:bg-[#0D1117]','text-slate-600','dark:text-slate-300');this.parentElement.querySelectorAll('button:not([data-pkg-type='+this.dataset.pkgType+'])').forEach(b=>{b.classList.remove('active','bg-[#1A3A5C]','text-white','shadow-lg');b.classList.add('bg-white','dark:bg-[#0D1117]','text-slate-600','dark:text-slate-300')})">
-                    <i class="fas fa-house mr-1"></i> Residential
-                </button>
-                <button data-pkg-type="commercial" class="px-5 py-2.5 rounded-xl text-sm font-bold transition-all bg-white dark:bg-[#0D1117] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-[#30363D]" onclick="this.classList.add('active','bg-[#1A3A5C]','text-white','shadow-lg');this.classList.remove('bg-white','dark:bg-[#0D1117]','text-slate-600','dark:text-slate-300');this.parentElement.querySelectorAll('button:not([data-pkg-type='+this.dataset.pkgType+'])').forEach(b=>{b.classList.remove('active','bg-[#1A3A5C]','text-white','shadow-lg');b.classList.add('bg-white','dark:bg-[#0D1117]','text-slate-600','dark:text-slate-300')})">
-                    <i class="fas fa-building mr-1"></i> Commercial
-                </button>
-            </div>
-
-            <!-- Tier Selector -->
-            <div class="flex items-center justify-center gap-3 mb-8 flex-wrap">
-                <button data-pkg-tier="basic" class="px-4 py-2 rounded-lg text-xs font-bold transition-all bg-white dark:bg-[#0D1117] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-[#30363D]" onclick="this.classList.add('active','bg-[#2EC4B6]','text-white');this.classList.remove('bg-white','dark:bg-[#0D1117]','text-slate-600','dark:text-slate-300');this.parentElement.querySelectorAll('button:not([data-pkg-tier='+this.dataset.pkgTier+'])').forEach(b=>{b.classList.remove('active','bg-[#2EC4B6]','text-white');b.classList.add('bg-white','dark:bg-[#0D1117]','text-slate-600','dark:text-slate-300')})">Basic</button>
-                <button data-pkg-tier="standard" class="active px-4 py-2 rounded-lg text-xs font-bold transition-all bg-[#2EC4B6] text-white" onclick="this.classList.add('active','bg-[#2EC4B6]','text-white');this.classList.remove('bg-white','dark:bg-[#0D1117]','text-slate-600','dark:text-slate-300');this.parentElement.querySelectorAll('button:not([data-pkg-tier='+this.dataset.pkgTier+'])').forEach(b=>{b.classList.remove('active','bg-[#2EC4B6]','text-white');b.classList.add('bg-white','dark:bg-[#0D1117]','text-slate-600','dark:text-slate-300')})">Standard</button>
-                <button data-pkg-tier="premium" class="px-4 py-2 rounded-lg text-xs font-bold transition-all bg-white dark:bg-[#0D1117] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-[#30363D]" onclick="this.classList.add('active','bg-[#2EC4B6]','text-white');this.classList.remove('bg-white','dark:bg-[#0D1117]','text-slate-600','dark:text-slate-300');this.parentElement.querySelectorAll('button:not([data-pkg-tier='+this.dataset.pkgTier+'])').forEach(b=>{b.classList.remove('active','bg-[#2EC4B6]','text-white');b.classList.add('bg-white','dark:bg-[#0D1117]','text-slate-600','dark:text-slate-300')})">Premium</button>
-            </div>
-
-            <!-- Result Card -->
-            <div class="bg-white dark:bg-[#0D1117] rounded-3xl border border-slate-100 dark:border-[#30363D] p-8 shadow-xl text-center">
-                <h3 class="font-black text-2xl text-slate-900 dark:text-white mb-1" id="pkg-name" style="font-family:'Poppins',sans-serif;">Home Shield</h3>
-                <p class="text-slate-500 dark:text-slate-400 text-sm mb-4" id="pkg-desc">Complete home protection package</p>
-                <div class="text-4xl font-black text-[#2EC4B6] mb-6" id="pkg-price">₹29,999</div>
-                <ul class="space-y-2 mb-8 text-left max-w-sm mx-auto" id="pkg-features">
-                    <li class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300"><i class="fas fa-check text-[#2EC4B6] text-xs flex-shrink-0"></i>4 HD Cameras</li>
-                    <li class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300"><i class="fas fa-check text-[#2EC4B6] text-xs flex-shrink-0"></i>2 Smart Locks</li>
-                    <li class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300"><i class="fas fa-check text-[#2EC4B6] text-xs flex-shrink-0"></i>Advanced Alarm System</li>
-                </ul>
-                <a href="contact.html" class="btn-primary px-8 py-3 text-sm">Get This Package <i class="fas fa-arrow-right text-xs"></i></a>
-            </div>
+        <!-- 3-Column Grid for All 3 Tiers (Basic, Standard, Premium) -->
+        <div id="package-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch reveal">
+            <!-- Dynamic 3-card layout rendered by components.js -->
         </div>
     </div>
 </section>
