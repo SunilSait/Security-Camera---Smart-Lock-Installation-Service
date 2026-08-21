@@ -59,7 +59,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             
             <!-- Left 7 Cols: The Booking Form -->
-            <div class="lg:col-span-8 bg-white dark:bg-[#0D1117] rounded-3xl border border-slate-200 dark:border-[#30363D] p-6 sm:p-10 shadow-xl reveal">
+            <div class="lg:col-span-8 bg-white dark:bg-[#0D1117] rounded-3xl border border-slate-200 dark:border-[#30363D] p-5 sm:p-8 md:p-10 shadow-xl reveal">
                 <form id="quote-booking-form" onsubmit="handleQuoteBookingSubmit(event)">
                     
                     <!-- Form Header -->
@@ -240,12 +240,13 @@
                     </div>
 
                     <!-- Submit Button -->
-                    <button type="submit" id="quote-submit-btn" class="btn-primary w-full py-4 text-sm flex items-center justify-center gap-2 cursor-pointer shadow-xl shadow-[#2EC4B6]/20">
-                        <i class="fas fa-calendar-check"></i>
+                    <button type="submit" id="quote-submit-btn" class="w-full py-4 px-4 text-xs sm:text-sm font-extrabold flex items-center justify-center gap-2.5 rounded-2xl bg-gradient-to-r from-[#2EC4B6] to-[#25A99D] hover:from-[#25A99D] hover:to-[#2EC4B6] text-slate-950 cursor-pointer shadow-xl shadow-[#2EC4B6]/25 transition-all duration-300 transform hover:-translate-y-0.5 text-center leading-snug whitespace-normal break-words">
+                        <i class="fas fa-calendar-check text-sm sm:text-base shrink-0"></i>
                         <span>Confirm Free Consultation & Request Quote</span>
                     </button>
-                    <p class="text-center text-xs text-slate-400 mt-3 flex items-center justify-center gap-1.5">
-                        <i class="fas fa-lock text-[#2EC4B6]"></i> Your information is confidential and will never be shared.
+                    <p class="text-center text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 mt-3.5 flex items-center justify-center gap-1.5 flex-wrap leading-relaxed">
+                        <i class="fas fa-lock text-[#2EC4B6] shrink-0 text-xs"></i>
+                        <span>Your information is 100% confidential and will never be shared.</span>
                     </p>
                 </form>
 
@@ -354,7 +355,7 @@
                 <!-- Card 3: Professional Installation Image Showcase -->
                 <div class="bg-white dark:bg-[#0D1117] rounded-3xl border border-slate-200 dark:border-[#30363D] overflow-hidden shadow-lg reveal-right animation-delay-300">
                     <div class="relative h-48 sm:h-56 overflow-hidden group">
-                        <img src="assets/images/quote-engineer.jpg" alt="Certified Security Technician" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='assets/images/why-choose-us.jpg'">
+                        <img src="assets/images/quote-engineer.jpg" alt="Certified Security Technician" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" style="object-position: center top;" onerror="this.src='assets/images/why-choose-us.jpg'">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#0D1117]/95 via-[#0D1117]/40 to-transparent"></div>
                         <div class="absolute top-3 left-3">
                             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1A3A5C]/85 backdrop-blur-md border border-white/20 text-white text-[10px] font-extrabold uppercase tracking-wider">
@@ -379,7 +380,7 @@
                 <!-- Card 4: Smart Security Hardware Visual Showcase (Fills down space) -->
                 <div class="bg-white dark:bg-[#0D1117] rounded-3xl border border-slate-200 dark:border-[#30363D] overflow-hidden shadow-lg reveal-right animation-delay-400">
                     <div class="relative h-48 sm:h-56 overflow-hidden group">
-                        <img src="assets/images/quote-hardware.jpg" alt="4K Ultra-HD Security Equipment" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='assets/images/product-camera.jpg'">
+                        <img src="assets/images/quote-hardware.jpg" alt="4K Ultra-HD Security Equipment" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" style="object-position: center top;" onerror="this.src='assets/images/product-camera.jpg'">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#0D1117]/95 via-[#0D1117]/40 to-transparent"></div>
                         <div class="absolute top-3 left-3">
                             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#2EC4B6]/20 backdrop-blur-md border border-[#2EC4B6]/40 text-[#2EC4B6] text-[10px] font-black uppercase tracking-wider">
@@ -439,7 +440,7 @@
                     <i class="fas fa-calendar-alt"></i>
                 </div>
                 <h4 class="font-bold text-sm text-slate-900 dark:text-white mb-2">1. Book Slot</h4>
-                <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Fill out the form above with your property type and preferred inspection time.</p>
+                <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Fill out the form above with your property and preferred inspection time.</p>
             </div>
 
             <div class="bg-[#F4F7FA] dark:bg-[#161B22] p-6 rounded-3xl border border-slate-100 dark:border-[#30363D] relative reveal card-hover animation-delay-200">
@@ -448,7 +449,7 @@
                     <i class="fas fa-magnifying-glass-location"></i>
                 </div>
                 <h4 class="font-bold text-sm text-slate-900 dark:text-white mb-2">2. Free Survey</h4>
-                <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Certified technician inspects the premises and identifies all security angles.</p>
+                <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed"> technician inspects the premises and identifies all security angles.</p>
             </div>
 
             <div class="bg-[#F4F7FA] dark:bg-[#161B22] p-6 rounded-3xl border border-slate-100 dark:border-[#30363D] relative reveal card-hover animation-delay-400">
@@ -457,7 +458,7 @@
                     <i class="fas fa-file-invoice-dollar"></i>
                 </div>
                 <h4 class="font-bold text-sm text-slate-900 dark:text-white mb-2">3. Custom Quote</h4>
-                <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Receive an all-inclusive itemized quotation with zero hidden fees.</p>
+                <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Receive an itemized customized quotation with zero hidden fees.</p>
             </div>
 
             <div class="bg-[#F4F7FA] dark:bg-[#161B22] p-6 rounded-3xl border border-slate-100 dark:border-[#30363D] relative reveal card-hover animation-delay-600">
@@ -466,7 +467,7 @@
                     <i class="fas fa-screwdriver-wrench"></i>
                 </div>
                 <h4 class="font-bold text-sm text-slate-900 dark:text-white mb-2">4. Pro Setup</h4>
-                <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Upon approval, our team installs and configures your system in under 24 hours.</p>
+                <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Upon approval, our team installs and configures your system in under 24hr.</p>
             </div>
         </div>
     </div>
