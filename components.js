@@ -600,10 +600,11 @@ function initPackageFinder() {
 
     function renderPackages() {
         const packages = packageData[selectedType] || packageData['residential'];
-        grid.innerHTML = packages.map((pkg) => {
+        grid.innerHTML = packages.map((pkg, idx) => {
             const isPop = pkg.popular;
+            const isLast = idx === 2;
             return `
-            <div class="bg-white dark:bg-[#0D1117] rounded-3xl ${isPop ? 'pricing-popular ring-2 ring-[#2EC4B6]' : 'border border-slate-200 dark:border-[#30363D]'} p-8 text-center card-hover flex flex-col relative transition-all duration-300">
+            <div class="bg-white dark:bg-[#0D1117] rounded-3xl ${isPop ? 'pricing-popular ring-2 ring-[#2EC4B6]' : 'border border-slate-200 dark:border-[#30363D]'} p-8 text-center card-hover flex flex-col relative transition-all duration-300 ${isLast ? 'md:col-span-2 md:max-w-md md:w-full md:mx-auto lg:col-span-1 lg:max-w-none' : ''}">
                 ${isPop ? `<div class="absolute -top-3.5 left-1/2 -translate-x-1/2"><span class="badge bg-[#2EC4B6] text-white px-4 py-1 text-xs font-black shadow-lg shadow-[#2EC4B6]/30 uppercase tracking-wider rounded-full">${pkg.badge || 'Most Popular'}</span></div>` : ''}
                 
                 <div class="w-14 h-14 rounded-2xl ${isPop ? 'bg-[#2EC4B6]/15 text-[#2EC4B6]' : 'bg-slate-100 dark:bg-[#161B22] text-slate-500 dark:text-slate-400'} flex items-center justify-center mx-auto mb-4 text-xl">
