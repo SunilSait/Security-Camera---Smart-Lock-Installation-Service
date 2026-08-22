@@ -82,9 +82,9 @@ function injectNav() {
                             </svg>
                         </div>
                     </div>
-                    <div class="flex flex-col leading-none">
-                        <span class="font-black text-slate-900 dark:text-white text-base tracking-tight" style="font-family:'Poppins',sans-serif;">SECURE</span>
-                        <span class="font-bold text-[#2EC4B6] text-[10px] tracking-[0.2em] uppercase">Vista Security</span>
+                    <div class="flex flex-col leading-tight">
+                        <span class="font-semibold text-slate-900 dark:text-white text-base tracking-tight" style="font-family:'Poppins',sans-serif;">SECURE</span>
+                        <span class="font-semibold text-[#2EC4B6] text-[10px] tracking-[0.2em] uppercase">Vista Security</span>
                     </div>
                 </a>
 
@@ -96,7 +96,7 @@ function injectNav() {
                 <!-- Right CTAs + Icons -->
                 <div class="flex items-center gap-2">
                     <!-- RTL Toggle -->
-                    <button id="nav-dir-btn" onclick="toggleDir()" class="hidden lg:flex w-9 h-9 items-center justify-center rounded-xl bg-slate-100 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] text-[10px] font-black text-slate-600 dark:text-slate-400 hover:border-[#2EC4B6]/50 transition-all" title="Toggle Direction">${document.documentElement.getAttribute('dir') === 'rtl' ? 'RTL' : 'LTR'}</button>
+                    <button id="nav-dir-btn" onclick="toggleDir()" class="hidden lg:flex w-9 h-9 items-center justify-center rounded-xl bg-slate-100 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] text-[10px] font-semibold text-slate-600 dark:text-slate-400 hover:border-[#2EC4B6]/50 transition-all" title="Toggle Direction">${document.documentElement.getAttribute('dir') === 'rtl' ? 'RTL' : 'LTR'}</button>
                     <!-- Dark Mode -->
                     <button onclick="toggleTheme()" class="hidden lg:flex w-9 h-9 items-center justify-center rounded-xl bg-slate-100 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] hover:border-[#2EC4B6]/50 transition-all" title="Toggle Theme" aria-label="Toggle dark mode">
                         <i id="nav-theme-icon" class="${document.documentElement.classList.contains('dark') ? 'fas fa-sun text-sm text-[#2EC4B6]' : 'fas fa-moon text-sm text-slate-500'}"></i>
@@ -187,9 +187,9 @@ function injectFooter() {
                                 </svg>
                             </div>
                         </div>
-                        <div class="flex flex-col leading-none">
-                            <span class="font-black text-white text-base tracking-tight" style="font-family:'Poppins',sans-serif;">SECURE</span>
-                            <span class="font-bold text-[#2EC4B6] text-[10px] tracking-[0.2em] uppercase">Vista Security</span>
+                        <div class="flex flex-col leading-tight">
+                            <span class="font-semibold text-white text-base tracking-tight" style="font-family:'Poppins',sans-serif;">SECURE</span>
+                            <span class="font-semibold text-[#2EC4B6] text-[10px] tracking-[0.2em] uppercase">Vista Security</span>
                         </div>
                     </a>
                     <p class="text-slate-400 text-sm leading-relaxed mb-6">
@@ -205,7 +205,7 @@ function injectFooter() {
 
                 <!-- Column 2: Quick Links -->
                 <div>
-                    <h3 class="font-black text-xs uppercase tracking-widest text-white mb-6" style="font-family:'Poppins',sans-serif;">Quick Links</h3>
+                    <h3 class="font-semibold text-xs uppercase tracking-widest text-white mb-6" style="font-family:'Poppins',sans-serif;">Quick Links</h3>
                     <ul class="space-y-3">
                         <li><a href="index.html" class="text-slate-400 hover:text-white text-sm transition-colors">Home</a></li>
                         <li><a href="home2.html" class="text-slate-400 hover:text-white text-sm transition-colors">Home 2 — Premium</a></li>
@@ -218,7 +218,7 @@ function injectFooter() {
 
                 <!-- Column 3: Resources -->
                 <div>
-                    <h3 class="font-black text-xs uppercase tracking-widest text-white mb-6" style="font-family:'Poppins',sans-serif;">Resources</h3>
+                    <h3 class="font-semibold text-xs uppercase tracking-widest text-white mb-6" style="font-family:'Poppins',sans-serif;">Resources</h3>
                     <ul class="space-y-3">
                         <li><a href="coming-soon.html" class="text-slate-400 hover:text-white text-sm transition-colors">Coming Soon</a></li>
                         <li><a href="coming-soon.html" class="text-slate-400 hover:text-white text-sm transition-colors">Blog & Security Tips</a></li>
@@ -232,7 +232,7 @@ function injectFooter() {
                 <!-- Column 4: Stay Updated -->
                 <div>
                     <div class="bg-white/5 border border-white/10 rounded-3xl p-6 shadow-xl">
-                        <h3 class="font-black text-base text-white mb-2" style="font-family:'Poppins',sans-serif;">Stay Protected</h3>
+                        <h3 class="font-semibold text-base text-white mb-2" style="font-family:'Poppins',sans-serif;">Stay Protected</h3>
                         <p class="text-slate-400 text-xs leading-relaxed mb-4">
                             Subscribe for security tips, new product launches & exclusive installation discounts.
                         </p>
@@ -494,7 +494,7 @@ function initPackageFinder() {
                 name: 'Home Starter',
                 price: '₹14,999',
                 desc: 'Essential smart protection for small homes & flats',
-                icon: 'fa-shield-halved',
+                icon: 'fa-house-lock',
                 popular: false,
                 features: [
                     '2 HD 1080p Cameras',
@@ -548,7 +548,7 @@ function initPackageFinder() {
                 name: 'Office Guard',
                 price: '₹49,999',
                 desc: 'Essential business surveillance & access control',
-                icon: 'fa-shield-halved',
+                icon: 'fa-store',
                 popular: false,
                 features: [
                     '4 HD Business Cameras',
@@ -564,7 +564,7 @@ function initPackageFinder() {
                 name: 'Business Shield',
                 price: '₹99,999',
                 desc: 'Comprehensive multi-zone commercial security',
-                icon: 'fa-shield-halved',
+                icon: 'fa-building-user',
                 popular: true,
                 badge: 'Best Value',
                 features: [
@@ -582,7 +582,7 @@ function initPackageFinder() {
                 name: 'Enterprise Vault',
                 price: '₹1,99,999',
                 desc: 'Enterprise-grade security & monitoring infrastructure',
-                icon: 'fa-building-shield',
+                icon: 'fa-vault',
                 popular: false,
                 badge: 'Enterprise Grade',
                 features: [
@@ -605,31 +605,31 @@ function initPackageFinder() {
             const isLast = idx === 2;
             return `
             <div class="bg-white dark:bg-[#0D1117] rounded-3xl ${isPop ? 'pricing-popular ring-2 ring-[#2EC4B6]' : 'border border-slate-200 dark:border-[#30363D]'} p-8 text-center card-hover flex flex-col relative transition-all duration-300 ${isLast ? 'md:col-span-2 md:max-w-md md:w-full md:mx-auto lg:col-span-1 lg:max-w-none' : ''}">
-                ${isPop ? `<div class="absolute -top-3.5 left-1/2 -translate-x-1/2"><span class="badge bg-[#2EC4B6] text-white px-4 py-1 text-xs font-black shadow-lg shadow-[#2EC4B6]/30 uppercase tracking-wider rounded-full">${pkg.badge || 'Most Popular'}</span></div>` : ''}
+                ${isPop ? `<div class="absolute -top-3.5 left-1/2 -translate-x-1/2"><span class="badge bg-[#2EC4B6] text-white px-4 py-1 text-xs font-semibold shadow-lg shadow-[#2EC4B6]/30 uppercase tracking-wider rounded-full">${pkg.badge || 'Most Popular'}</span></div>` : ''}
                 
                 <div class="w-14 h-14 rounded-2xl ${isPop ? 'bg-[#2EC4B6]/15 text-[#2EC4B6]' : 'bg-slate-100 dark:bg-[#161B22] text-slate-500 dark:text-slate-400'} flex items-center justify-center mx-auto mb-4 text-xl">
                     <i class="fas ${pkg.icon}"></i>
                 </div>
                 
-                <span class="text-xs font-extrabold uppercase tracking-widest text-[#2EC4B6] mb-1">${pkg.tier}</span>
-                <h3 class="font-black text-2xl text-slate-900 dark:text-white mb-2" style="font-family:'Poppins',sans-serif;">${pkg.name}</h3>
-                <p class="text-slate-500 dark:text-slate-400 text-xs mb-6 min-h-[32px]">${pkg.desc}</p>
+                <span class="text-xs font-semibold uppercase tracking-widest text-[#2EC4B6] mb-1">${pkg.tier}</span>
+                <h3 class="font-semibold text-2xl text-slate-900 dark:text-white mb-2" style="font-family:'Poppins',sans-serif;">${pkg.name}</h3>
+                <p class="text-slate-500 dark:text-slate-400 text-xs mb-6 min-h-[32px] font-normal">${pkg.desc}</p>
                 
                 <div class="mb-6 pb-6 border-b border-slate-100 dark:border-[#30363D]">
-                    <div class="text-4xl font-black ${isPop ? 'text-[#2EC4B6]' : 'text-slate-900 dark:text-white'}">${pkg.price}</div>
-                    <div class="text-slate-400 text-xs mt-1 font-medium">all-inclusive installation</div>
+                    <div class="text-4xl font-semibold ${isPop ? 'text-[#2EC4B6]' : 'text-slate-900 dark:text-white'}">${pkg.price}</div>
+                    <div class="text-slate-400 text-xs mt-1 font-normal">all-inclusive installation</div>
                 </div>
                 
                 <ul class="space-y-3 mb-8 flex-grow text-left">
                     ${pkg.features.map(f => `
-                        <li class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                        <li class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-normal">
                             <i class="fas fa-check text-[#2EC4B6] text-xs flex-shrink-0"></i>
                             <span>${f}</span>
                         </li>
                     `).join('')}
                 </ul>
                 
-                <a href="contact.html" class="${isPop ? 'btn-primary' : 'btn-secondary'} w-full py-3.5 text-xs font-bold uppercase tracking-wider">
+                <a href="contact.html" class="${isPop ? 'btn-primary' : 'btn-secondary'} w-full py-3.5 text-xs font-semibold uppercase tracking-wider">
                     Get ${pkg.tier} Plan <i class="fas fa-arrow-right text-[10px] ml-1"></i>
                 </a>
             </div>

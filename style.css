@@ -143,7 +143,73 @@ a { text-decoration: none; color: inherit; }
 .animation-delay-800 { animation-delay: 0.8s; }
 .animation-delay-1000 { animation-delay: 1s; }
 
-/* --- Typography --- */
+/* --- Typography Weights Standard --- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 600 !important;
+    letter-spacing: -0.015em;
+    line-height: 1.25;
+}
+
+h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
+    font-weight: 600 !important;
+}
+
+h1.font-black, h2.font-black, h3.font-black, h4.font-black, h5.font-black, h6.font-black,
+h1.font-extrabold, h2.font-extrabold, h3.font-extrabold, h4.font-extrabold, h5.font-extrabold, h6.font-extrabold,
+h1.font-bold, h2.font-bold, h3.font-bold, h4.font-bold, h5.font-bold, h6.font-bold,
+.heading-600 {
+    font-weight: 600 !important;
+}
+
+/* Paragraphs & Body Copy (400–550 weight) */
+p, .paragraph-body, .section-desc, .feature-desc, .card-desc, .lead-text {
+    font-family: var(--font-body);
+    font-weight: 450;
+    line-height: 1.68;
+}
+
+p, p span:not(.badge):not(.tag-pill) {
+    font-weight: 450;
+}
+
+p.font-medium, .text-medium {
+    font-weight: 500 !important;
+}
+
+p strong, p b {
+    font-weight: 600 !important;
+}
+
+/* --- Consistent Global Left & Right Padding --- */
+.site-container,
+.section-container,
+.container-standard {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+    .site-container,
+    .section-container,
+    .container-standard {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .site-container,
+    .section-container,
+    .container-standard {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
 .gradient-text {
     background: linear-gradient(135deg, #2EC4B6, #1A3A5C);
     -webkit-background-clip: text;
@@ -167,7 +233,7 @@ a { text-decoration: none; color: inherit; }
     background: var(--primary-light);
     color: var(--primary);
     font-size: 0.7rem;
-    font-weight: 800;
+    font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     border: 1px solid rgba(26,58,92,0.1);
@@ -188,7 +254,7 @@ a { text-decoration: none; color: inherit; }
     background: var(--primary);
     color: #fff;
     font-family: var(--font-display);
-    font-weight: 700;
+    font-weight: 600;
     font-size: 0.875rem;
     border-radius: var(--radius-xl);
     border: 2px solid var(--primary);
@@ -214,7 +280,7 @@ a { text-decoration: none; color: inherit; }
     background: transparent;
     color: var(--primary);
     font-family: var(--font-display);
-    font-weight: 700;
+    font-weight: 600;
     font-size: 0.875rem;
     border-radius: var(--radius-xl);
     border: 2px solid var(--border-color);
@@ -257,7 +323,7 @@ a { text-decoration: none; color: inherit; }
     padding: 0.25rem 0.75rem;
     border-radius: 9999px;
     font-size: 0.65rem;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
@@ -288,6 +354,68 @@ a { text-decoration: none; color: inherit; }
 .dark .form-input:focus {
     border-color: #2EC4B6;
     background: #161B22;
+}
+
+/* --- Date & Time Input Calendar Styling --- */
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"] {
+    color-scheme: light;
+    cursor: pointer;
+}
+
+.dark input[type="date"],
+.dark input[type="time"],
+.dark input[type="datetime-local"] {
+    color-scheme: dark !important;
+}
+
+.date-input-wrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+
+.date-input-wrapper input[type="date"] {
+    width: 100%;
+    cursor: pointer;
+    padding-inline-end: 2.75rem !important;
+}
+
+/* Completely remove native Webkit calendar indicator icon so it never overlays or stretches */
+.date-input-wrapper input[type="date"]::-webkit-calendar-picker-indicator,
+.date-input-wrapper input[type="date"]::-webkit-inner-spin-button,
+.date-input-wrapper input[type="date"]::-webkit-clear-button {
+    display: none !important;
+    -webkit-appearance: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: none !important;
+}
+
+.date-input-wrapper .calendar-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    inset-inline-end: 1rem;
+    pointer-events: none;
+    font-size: 0.95rem;
+    color: #64748B;
+    z-index: 2;
+    transition: color 0.2s ease;
+}
+
+.dark .date-input-wrapper .calendar-icon {
+    color: #ffffff !important;
+}
+
+.date-input-wrapper:hover .calendar-icon {
+    color: #2EC4B6 !important;
 }
 
 /* Textarea */

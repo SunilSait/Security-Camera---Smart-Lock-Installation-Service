@@ -164,7 +164,7 @@
                                     <div class="text-xs font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
                                         <i class="fas fa-location-dot text-[#2EC4B6]"></i> Free On-Site Survey
                                     </div>
-                                    <span class="text-[11px] text-slate-500 dark:text-slate-400">Engineer visits your location (Recommended)</span>
+                                    <span class="text-[11px] text-slate-500 dark:text-slate-400">Engineer visits your location</span>
                                 </div>
                             </label>
                             <label class="cursor-pointer p-3.5 rounded-xl border-2 border-slate-200 dark:border-[#30363D] bg-white dark:bg-[#0D1117] flex items-center gap-3 mode-card">
@@ -181,7 +181,10 @@
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
                                 <label class="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">Preferred Date</label>
-                                <input type="date" id="booking-date" name="preferred_date" class="form-input text-xs" required>
+                                <div class="date-input-wrapper" onclick="const inp=this.querySelector('input'); if(inp && inp.showPicker) inp.showPicker();">
+                                    <input type="date" id="booking-date" name="preferred_date" class="form-input text-xs" required>
+                                    <i class="fas fa-calendar-days calendar-icon"></i>
+                                </div>
                             </div>
                             <div>
                                 <label class="block text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">Preferred Time Slot</label>
@@ -280,8 +283,8 @@
                     </div>
 
                     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <a href="https://wa.me/919876543210?text=Hi%20SecureVista,%20I%20just%20booked%20a%20free%20consultation!" target="_blank" class="btn-secondary px-6 py-3.5 text-xs inline-flex items-center gap-2 text-emerald-500 border-emerald-500/40 hover:bg-emerald-500/10">
-                            <i class="fab fa-whatsapp text-sm text-emerald-500"></i> Fast WhatsApp Support
+                        <a href="https://wa.me/919876543210?text=Hi%20SecureVista,%20I%20just%20booked%20a%20free%20consultation!" target="_blank" class="btn-secondary px-6 py-3.5 text-xs inline-flex items-center gap-2 text-[#2EC4B6] border-[#2EC4B6]/40 hover:bg-[#2EC4B6]/10">
+                            <i class="fab fa-whatsapp text-sm text-[#2EC4B6]"></i> Fast WhatsApp Support
                         </a>
                         <a href="index.html" class="btn-primary px-8 py-3.5 text-xs">
                             <i class="fas fa-house text-xs mr-1"></i> Return to Home
@@ -342,10 +345,10 @@
                                 <div class="text-xs font-black text-white">+91 98765 43210</div>
                             </div>
                         </a>
-                        <a href="https://wa.me/919876543210" target="_blank" class="flex items-center gap-3 p-3 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/30 transition-all">
-                            <div class="w-8 h-8 rounded-lg bg-emerald-500 text-white flex items-center justify-center font-bold text-xs"><i class="fab fa-whatsapp text-sm"></i></div>
+                        <a href="https://wa.me/919876543210" target="_blank" class="flex items-center gap-3 p-3 rounded-xl bg-[#2EC4B6]/15 hover:bg-[#2EC4B6]/25 border border-[#2EC4B6]/30 transition-all">
+                            <div class="w-8 h-8 rounded-lg bg-[#2EC4B6] text-slate-900 flex items-center justify-center font-bold text-xs"><i class="fab fa-whatsapp text-sm"></i></div>
                             <div>
-                                <div class="text-[10px] text-emerald-300 uppercase font-bold tracking-wider">WhatsApp Consultation</div>
+                                <div class="text-[10px] text-[#2EC4B6] uppercase font-bold tracking-wider">WhatsApp Consultation</div>
                                 <div class="text-xs font-black text-white">Chat with an Expert</div>
                             </div>
                         </a>
@@ -434,40 +437,56 @@
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="bg-[#F4F7FA] dark:bg-[#161B22] p-6 rounded-3xl border border-slate-100 dark:border-[#30363D] relative reveal card-hover">
-                <span class="text-4xl font-black text-[#2EC4B6]/20 absolute top-4 right-6">01</span>
-                <div class="w-12 h-12 rounded-2xl bg-[#2EC4B6]/15 text-[#2EC4B6] flex items-center justify-center text-lg mb-4">
-                    <i class="fas fa-calendar-alt"></i>
+            <div class="bg-[#F4F7FA] dark:bg-[#161B22] p-6 rounded-3xl border border-slate-100 dark:border-[#30363D] relative reveal card-hover flex flex-col justify-between">
+                <div class="flex items-center justify-between mb-5">
+                    <div class="w-12 h-12 rounded-2xl bg-[#2EC4B6]/15 text-[#2EC4B6] flex items-center justify-center text-lg shadow-sm">
+                        <i class="fas fa-calendar-days"></i>
+                    </div>
+                    <span class="text-3xl font-semibold text-[#2EC4B6]/40 dark:text-[#2EC4B6]/30 select-none">01</span>
                 </div>
-                <h4 class="font-bold text-sm text-slate-900 dark:text-white mb-2">1. Book Slot</h4>
-                <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Fill out the form above with your property and preferred inspection time.</p>
+                <div>
+                    <h4 class="font-semibold text-base text-slate-900 dark:text-white mb-2">1. Book Slot</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-normal">Fill out the form above with your property and preferred inspection time.</p>
+                </div>
             </div>
 
-            <div class="bg-[#F4F7FA] dark:bg-[#161B22] p-6 rounded-3xl border border-slate-100 dark:border-[#30363D] relative reveal card-hover animation-delay-200">
-                <span class="text-4xl font-black text-[#2EC4B6]/20 absolute top-4 right-6">02</span>
-                <div class="w-12 h-12 rounded-2xl bg-[#1A3A5C]/15 text-[#1A3A5C] dark:text-[#2EC4B6] flex items-center justify-center text-lg mb-4">
-                    <i class="fas fa-magnifying-glass-location"></i>
+            <div class="bg-[#F4F7FA] dark:bg-[#161B22] p-6 rounded-3xl border border-slate-100 dark:border-[#30363D] relative reveal card-hover animation-delay-200 flex flex-col justify-between">
+                <div class="flex items-center justify-between mb-5">
+                    <div class="w-12 h-12 rounded-2xl bg-[#1A3A5C]/15 text-[#1A3A5C] dark:text-[#2EC4B6] flex items-center justify-center text-lg shadow-sm">
+                        <i class="fas fa-magnifying-glass-location"></i>
+                    </div>
+                    <span class="text-3xl font-semibold text-[#2EC4B6]/40 dark:text-[#2EC4B6]/30 select-none">02</span>
                 </div>
-                <h4 class="font-bold text-sm text-slate-900 dark:text-white mb-2">2. Free Survey</h4>
-                <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed"> technician inspects the premises and identifies all security angles.</p>
+                <div>
+                    <h4 class="font-semibold text-base text-slate-900 dark:text-white mb-2">2. Free Survey</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-normal">Our certified technician inspects the premises and identifies all security angles.</p>
+                </div>
             </div>
 
-            <div class="bg-[#F4F7FA] dark:bg-[#161B22] p-6 rounded-3xl border border-slate-100 dark:border-[#30363D] relative reveal card-hover animation-delay-400">
-                <span class="text-4xl font-black text-[#2EC4B6]/20 absolute top-4 right-6">03</span>
-                <div class="w-12 h-12 rounded-2xl bg-[#2EC4B6]/15 text-[#2EC4B6] flex items-center justify-center text-lg mb-4">
-                    <i class="fas fa-file-invoice-dollar"></i>
+            <div class="bg-[#F4F7FA] dark:bg-[#161B22] p-6 rounded-3xl border border-slate-100 dark:border-[#30363D] relative reveal card-hover animation-delay-400 flex flex-col justify-between">
+                <div class="flex items-center justify-between mb-5">
+                    <div class="w-12 h-12 rounded-2xl bg-[#2EC4B6]/15 text-[#2EC4B6] flex items-center justify-center text-lg shadow-sm">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <span class="text-3xl font-semibold text-[#2EC4B6]/40 dark:text-[#2EC4B6]/30 select-none">03</span>
                 </div>
-                <h4 class="font-bold text-sm text-slate-900 dark:text-white mb-2">3. Custom Quote</h4>
-                <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Receive an itemized customized quotation with zero hidden fees.</p>
+                <div>
+                    <h4 class="font-semibold text-base text-slate-900 dark:text-white mb-2">3. Custom Quote</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-normal">Receive an itemized customized quotation with zero hidden fees.</p>
+                </div>
             </div>
 
-            <div class="bg-[#F4F7FA] dark:bg-[#161B22] p-6 rounded-3xl border border-slate-100 dark:border-[#30363D] relative reveal card-hover animation-delay-600">
-                <span class="text-4xl font-black text-[#2EC4B6]/20 absolute top-4 right-6">04</span>
-                <div class="w-12 h-12 rounded-2xl bg-[#1A3A5C]/15 text-[#1A3A5C] dark:text-[#2EC4B6] flex items-center justify-center text-lg mb-4">
-                    <i class="fas fa-screwdriver-wrench"></i>
+            <div class="bg-[#F4F7FA] dark:bg-[#161B22] p-6 rounded-3xl border border-slate-100 dark:border-[#30363D] relative reveal card-hover animation-delay-600 flex flex-col justify-between">
+                <div class="flex items-center justify-between mb-5">
+                    <div class="w-12 h-12 rounded-2xl bg-[#1A3A5C]/15 text-[#1A3A5C] dark:text-[#2EC4B6] flex items-center justify-center text-lg shadow-sm">
+                        <i class="fas fa-screwdriver-wrench"></i>
+                    </div>
+                    <span class="text-3xl font-semibold text-[#2EC4B6]/40 dark:text-[#2EC4B6]/30 select-none">04</span>
                 </div>
-                <h4 class="font-bold text-sm text-slate-900 dark:text-white mb-2">4. Pro Setup</h4>
-                <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Upon approval, our team installs and configures your system in under 24hr.</p>
+                <div>
+                    <h4 class="font-semibold text-base text-slate-900 dark:text-white mb-2">4. Pro Setup</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-normal">Upon approval, our team installs and configures your system in under 24hr.</p>
+                </div>
             </div>
         </div>
     </div>
