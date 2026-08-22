@@ -196,10 +196,10 @@ function injectFooter() {
                         Professional security camera & smart lock installation services. Protecting homes and businesses with cutting-edge smart security solutions.
                     </p>
                     <div class="flex items-center gap-3">
-                        <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full border border-white/20 hover:border-white text-slate-400 hover:text-white transition-colors" aria-label="Facebook"><i class="fab fa-facebook-f text-sm"></i></a>
-                        <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full border border-white/20 hover:border-white text-slate-400 hover:text-white transition-colors" aria-label="Instagram"><i class="fab fa-instagram text-sm"></i></a>
-                        <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full border border-white/20 hover:border-white text-slate-400 hover:text-white transition-colors" aria-label="YouTube"><i class="fab fa-youtube text-sm"></i></a>
-                        <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full border border-white/20 hover:border-white text-slate-400 hover:text-white transition-colors" aria-label="Twitter"><i class="fab fa-x-twitter text-sm"></i></a>
+                        <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full border border-white/20 hover:border-[#1877F2] text-slate-400 hover:text-white hover:bg-[#1877F2] transition-all" aria-label="Facebook"><i class="fab fa-facebook-f text-sm"></i></a>
+                        <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full border border-white/20 hover:border-[#E4405F] text-slate-400 hover:text-white hover:bg-[#E4405F] transition-all" aria-label="Instagram"><i class="fab fa-instagram text-sm"></i></a>
+                        <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full border border-white/20 hover:border-[#FF0000] text-slate-400 hover:text-white hover:bg-[#FF0000] transition-all" aria-label="YouTube"><i class="fab fa-youtube text-sm"></i></a>
+                        <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full border border-white/20 hover:border-white text-slate-400 hover:text-white hover:bg-white/20 transition-all" aria-label="Twitter"><i class="fab fa-x-twitter text-sm"></i></a>
                     </div>
                 </div>
 
